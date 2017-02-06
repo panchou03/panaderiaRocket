@@ -1,5 +1,13 @@
+.contenido {
+	height: 1050px;
+	width: 780px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .cero {
-	background-color: black;
+	height: 15px;
+	background: black;
 	color:white;
 	font-size: 10px;
 	font-family: Helvetica;
@@ -9,39 +17,102 @@
 }
 
 .uno {
-	border: 10px;
-	margin: 10px;
-	padding: 20px;
-}
-
-.espaciouno {
-	background-color: white;
-	padding: 20px;
-	margin: 0;
+	height: 70px;
+	background: red;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	text-align: center;
 }
 
 .logo {
-	background-color: yellow;
-	color:white;
-	font-size: 36px;
-	font-family: Helvetica;
-	text-align: left;
-	padding: 14px;
-	margin: 0;
-}
-
-.menusprincipales {
-	background-color: yellow;
-	color:white;
-	font-size: 28px;
-	font-family: Helvetica;
+	height: 70px;
+	background: #CE472A;
+	width: 253px;
+	padding-top: 5px;
 	text-align: center;
-	padding: 14px;
-	margin: 0;
+	font-size: 25px;
 }
 
-.unoespacio {
-	background-color: white;
-	padding: 20px;
-	margin: 0;
+.dos {
+	height: 220px;
+	background: blue;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.tres {
+	height: 70px;
+	background: green;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.cuatro {
+	height: 130px;
+	background: blue;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.cinco {
+	height: 70px;
+	background: yellow;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.seis {
+	height: 130px;
+	background: brown;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.siete {
+	height: 100px;
+	background: purple;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.ocho {
+	height: 200px;
+	background: orange;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+footer {
+	background: #f21;
+	height: 45px; 
+	width: 780px;
+	padding-top: 15px;
+}
+
+footer p{
+	font-family: arial;
+	font-size: 9px;
+	text-align: center;
 }
