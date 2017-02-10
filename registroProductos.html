@@ -19,7 +19,7 @@
      </div>
 
      <div class="tres">
-    	<form action="registroPedidos.html" method="get">
+    	<form action="tablaRegistros.html" method="get">
 
       	<label for="nombre">Nombre</label>
       	<input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre del producto" />
@@ -47,13 +47,10 @@
         <textarea name="datosproovedor" id="datosproovedor" placeholder="Escribe los datos del Proovedor"></textarea>
         <br />
 
-        <form enctype="multipart/form-data" action="uploader.php" method="POST">
-          <label for="foto">Imagen Producto</label>
-          <input id="foto" name="subirimagen" type="file" />
-          <input type="submit" value="Subir imagen" />
-        </form>
-        <br />
+        <label for="foto">Imagen Producto</label>
+        <input id="foto" name="subirimagen" type="file" />
 
+        <input type="submit" value="Registrar"></input>
     	</form>
      </div>
 
