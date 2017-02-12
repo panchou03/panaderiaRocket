@@ -1,5 +1,5 @@
 .contenido {
-	height: 1050px;
+	height: 400px;
 	width: 780px;
 	margin-right: auto;
 	margin-left: auto;
@@ -16,13 +16,22 @@
 	margin: 0;
 }
 
+
 .uno {
 	height: 70px;
 	background: #91817D;
 	width: 760px;
 	padding-left: 10px;
 	padding-right:  10px;
-	text-align: center;
+	font: bold 90% monospace;
+	font-size: 32px;
+}
+
+.dos {
+	height: 250px;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
 }
 
 .anuncioencabronado {
