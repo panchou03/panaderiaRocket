@@ -1,0 +1,71 @@
+html{
+
+	background-color: #995FEE;
+}
+
+#info{
+	color: white;
+	font-style: italic;
+	text-align: left;
+	font-size: small;
+	background-color: black;
+}
+
+#header{
+	
+
+	background-color: #D61202;
+	font-size: medium;
+	text-align: center;
+	color:white;
+	margin-top: 2px;
+	margin-bottom: 2px;
+    height: 60px;
+    padding-top: 18px;
+    padding-right: 10px;
+}
+
+.contenido{
+	
+	text-align: center;
+	background-image: url('/home/javier/Escritorio/panes/logo.png');
+	height: 668px;
+	background-color: #995FEE;
+
+
+}
+
+a{
+	color:white;
+}
+
+label { 
+
+	    display: block; 
+	    margin: .5em 0 0 0; 
+	 }
+
+.btn { display: block; 
+	   margin: 1em 0;
+	 }
+
+#footer{
+
+background-color:#D61202;
+height: 30px; 
+text-align: center;
+color: white;
+font-style: italic;
+font-size:-small;
+}
+
+#menu{
+
+background-color: #D61202;
+color: white;
+margin-bottom:2px;
+padding-top: 3px; 
+height: 30px;
+width: 380px;
+
+}
