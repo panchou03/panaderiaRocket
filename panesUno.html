@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  	<title></title>
+  	<link rel="stylesheet" type="text/css" href="panesUno.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+  	<div class="cero">
+      Bienvenido, <span class="palabraUser">Panchitou</span>
+    </div>
+
+   	<div class="contenido">
+
+     <div class="uno">
+      <img src="bannerPanes.jpg" id="bannerPanes" />
+     </div>
+
+     <div class="dos">
+      <form action="panesUno.html" method="get">
+        <input type=image src="botonPanes.jpg" width="120" height="55">
+        <input type=image src="botonPasteles.jpg" width="120" height="55">
+        <input type=image src="botonGelatinas.jpg" width="120" height="55">
+        <input type=image src="botonTerminos.jpg" width="120" height="55">
+        <input type=image src="botonContacto.jpg" width="120" height="55">
+      </form>
+     </div>
+
+     <div class="tres">
+      <form action="panesUno.html" method="get">
+        <table>
+          <caption>Productos</caption>
+          <colgroup>
+            <col></col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <td>Nombre</td>
+              <td>Descripción</td>
+              <td>Precio por Docena</td>
+              <th>Agregar al Carrito</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="magdalena.png" width="100" height="100"></td>
+              <td>Magdalena</td>
+              <td>Pan individual, suave, tambien llamado mantecada</td>
+              <td>$375.00</td>
+              <td><input type="checkbox" id="opc1" name="opc" value="magdalena" /></td>
+            </tr>
+            <tr>
+              <td><img src="concha.png" width="100" height="100"></td>
+              <td>Magdalena</td>
+              <td>Pan en forma de semi-circulo con una costra de azucar</td>
+              <td>$375.00</td>
+              <td><input type="checkbox" id="opc2" name="opc" value="concha" /></td>
+            </tr>
+          </tbody>
+        </table>
+        <input type="submit" name="agregarAlCarrito" />
+      </form>
+     </div>
+     <footer>
+       <p>
+        PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
+        </p>
+     </footer>    
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+.cero {
+  height: 20px;
+  background: black;
+  color:white;
+  font-size: 15px;
+  font-family: Helvetica;
+  text-align: right;
+  padding: 5px;
+  margin: 0;
+}
+
+.palabraUser {
+  color:red;
+}
+
+.uno {
+  height: 20px;
+  width: auto;
+}
+
+.dos {
+  background-color: #F53029;
+  height: auto;
+  width: 720px;
+  padding-left: 10px;
+  padding-right:  10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font: bold 90% monospace;
+}
+
+label {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+input {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+select {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+textarea {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+footer {
+  background: #f21;
+  height: 45px; 
+  width: 740px;
+  padding-top: 15px;
+}
+
+footer p{
+  font-family: arial;
+  font-size: 9px;
+  text-align: center;
+}

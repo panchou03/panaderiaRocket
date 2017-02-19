@@ -1,0 +1,47 @@
+.cero {
+	height: 20px;
+	background: black;
+	color:white;
+	font-size: 15px;
+	font-family: Helvetica;
+	text-align: right;
+	padding: 5px;
+	margin: 0;
+}
+
+.palabraUser {
+	color:red;
+}
+
+.uno {
+	height: 20px;
+	width: auto;
+}
+
+.dos {
+	font: bold 90% monospace;
+}
+
+th, td {
+	border-radius: 10px;
+	background-color: #F53029;
+	color: white;
+	padding: 5px 10px;
+}
+
+table {
+	border-spacing: 3px;
+}
+
+footer {
+	background: #f21;
+	height: 45px; 
+	width: 740px;
+	padding-top: 15px;
+}
+
+footer p{
+	font-family: arial;
+	font-size: 9px;
+	text-align: center;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  	<title></title>
+  	<link rel="stylesheet" type="text/css" href="administracionUno.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+  	<div class="cero">
+      Perfil de administrador de <span class="palabraUser">MaquinaDeAmor33</span>
+    </div>
+
+    <div class="uno">
+      <!-- Espacio meramente estético -->
+    </div>
+
+    <div class="dos">
+      <form>
+        <table>
+          <br />
+          <caption>Administración de Productos</caption>
+          <colgroup>
+            <col></col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <td>Código</td>
+              <td>Nombre</td>
+              <td>Descripción</td>
+              <td>Precio por Docena</td>
+              <td>Categoria</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="magdalena.png" width="30" height="30"></td>
+              <td>342100</td>
+              <td>Magdalena</td>
+              <td>Pan individual, suave, tambien llamado mantecada</td>
+              <td>$375.00</td>
+              <td>Pan</td>
+              <td><input type="radio" id="opc1" name="opc" value="magdalena" /></td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+      </form>
+      <form action="administracionDos.html" method="get">
+        <input type="submit" name="Alta" value="Agregar nuevo Producto" />
+      </form>
+      <form action="administracionTres.html" method="get">
+        <input type="submit" name="Baja" value="Dar de Baja Producto" />
+      </form>
+      <form action="administracionCuatro.html" method="get">
+        <input type="submit" name="Modificacion" value="Modificar Producto" />
+      </form>
+    </div>
+    
+  </body>
+</html>

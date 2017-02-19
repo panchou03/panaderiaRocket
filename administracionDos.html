@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  	<title></title>
+  	<link rel="stylesheet" type="text/css" href="administracionDos.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+  	<div class="cero">
+      Perfil de administrador de <span class="palabraUser">MaquinaDeAmor33</span>
+    </div>
+
+    <div class="uno">
+      <!-- Espacio meramente estético -->
+    </div>
+
+    <div class="dos">
+      <form action="administracionUno.html" method="get">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre del producto" />
+
+        <label for="codigo">Codigo</label>
+        <input type="codigo" id="idproducto" name="codigo" placeholder="Introduzca el codigo del producto" />
+        <br /> <br />
+
+        <label for="elemento">Selecciona el tipo</label>
+        <select id="elemento" name="elemento[]" size="2" multiple="multiple">
+          <option value="pan">Pan</option>
+          <option value="pstel">Pastel</option>
+          <option value="gelatina">Gelatina</option>
+        </select>
+
+        <label for="descripcion">Descripcion</label>
+        <textarea name="descripcion" id="descripcion" placeholder="Escribe la descripcion del producto"></textarea>
+        <br /> <br />
+
+        <label for="datosproovedor">Datos del Proovedor</label>
+        <textarea name="datosproovedor" id="datosproovedor" placeholder="Escribe los datos del Proovedor"></textarea>
+        <br /> <br />
+
+        <label for="foto">Imagen Producto</label>
+        <input id="foto" name="subirimagen" type="file" />
+
+        <input type="submit" value="Registrar"></input>
+      </form>
+    </div>
+    
+  </body>
+</html>

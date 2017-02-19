@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  	<title></title>
+  	<link rel="stylesheet" type="text/css" href="administracionCuatro.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+  	<div class="cero">
+      Perfil de administrador de <span class="palabraUser">MaquinaDeAmor33</span>
+    </div>
+
+    <div class="uno">
+      <!-- Espacio meramente estético -->
+    </div>
+
+    <div class="dos">
+      <form action="administracionUno.html" method="get">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Magdalena" />
+
+        <label for="codigo">Codigo</label>
+        <input type="codigo" id="idproducto" name="codigo" placeholder="342100" />
+        <br /> <br />
+
+        <label for="elemento">Selecciona el tipo</label>
+        <select id="elemento" name="elemento[]" size="2" multiple="multiple">
+          <option value="pan">Pan</option>
+          <option value="pstel">Pastel</option>
+          <option value="gelatina">Gelatina</option>
+        </select>
+
+        <label for="descripcion">Descripcion</label>
+        <textarea name="descripcion" id="descripcion" placeholder="Pan individual, suave, tambien llamado mantecada"></textarea>
+        <br /> <br />
+
+        <label for="precioProducto">Precio por Docena</label>
+        <textarea name="precioProducto" id="precioProducto" placeholder="$375.00"></textarea>
+        <br /> <br />
+
+        <label for="foto">Imagen Producto</label>
+        <input id="foto" name="subirimagen" type="file" />
+
+        <input type="submit" value="Actualizar"></input>
+      </form>
+    </div>
+    
+  </body>
+</html>
