@@ -1,0 +1,80 @@
+.contenido {
+	height: auto;
+	width: 780px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.cero {
+	height: 20px;
+	background: black;
+	color:white;
+	font-size: 15px;
+	font-family: Helvetica;
+	text-align: right;
+	padding: 5px;
+	margin: 0;
+}
+
+.palabraUser {
+	color:red;
+}
+
+.uno {
+	height: 150px;
+	width: 720px;
+	padding-left: 10px;
+	padding-right:  10px;
+}
+
+.dos {
+	height: 55px;
+	background: #91817D;
+	width: 720px;
+	padding-left: 10px;
+	padding-right:  10px;
+}
+
+.tres {
+	height: auto;
+	background: #91817D;
+	width: 720px;
+	padding-left: 10px;
+	padding-right:  10px;
+	font: bold 90% monospace;
+	text-align: justify;
+	color: white;
+}
+
+.tres p,legend{
+	font-size: large;
+	color: white;
+	text-align: center;
+
+}
+
+label {
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+label { 
+
+	    display: block; 
+	    margin: .5em 0 0 0; 
+	 }
+
+footer {
+	background: #f21;
+	height: 45px; 
+	width: 740px;
+	padding-top: 15px;
+}
+
+footer p{
+	font-family: arial;
+	font-size: 9px;
+	text-align: center;
+}
