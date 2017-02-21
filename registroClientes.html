@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilos/registroClientes.css">
+  </head>
+  <body>
+  	<div class="encabezado">Panaderia Rocket - Los mejores panes en linea -</div>
+
+   	<div class="contenido">
+     <div class="imagenlogo">
+      <img src="images/logo.png" id="logo" />
+      <article class="menusprincipales"></article>
+     </div>
+
+     <div class="imagenanuncio">
+      <img src="images/anuncio.jpg" id="anuncio" />
+     </div>
+
+     <div class="registros">
+    	<form action="tablaClientes.html" method="get">
+
+      	<label for="nombre">Nombre</label>
+      	<input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" />
+
+  <br />
+
+        <label for="Edad">Edad</label>
+        <input type="Edad" id="Edad" name="Edad" placeholder="Introduzca su edad" />
+        <br />
+
+        <label for="Date">Día de Nacimiento</label>
+        <select id="Date" name="Date[]" size="3" multiple="multiple">
+          <option value="Date1">1</option>
+          <option value="Date2">2</option>
+          <option value="Date3">3</option>
+          <option value="Date4">4</option>
+          <option value="Date5">5</option>
+          <option value="Date6">6</option>
+          <option value="Date7">7</option>
+          <option value="Date8">8</option>
+          <option value="Date9">9</option>
+          <option value="Date10">10</option>
+          <option value="Date11">11</option>
+          <option value="Date12">12</option>
+          <option value="Date13">13</option>
+          <option value="Date14">14</option>
+          <option value="Date15">15</option>
+          <option value="Date16">16</option>
+          <option value="Date17">17</option>
+          <option value="Date18">18</option>
+          <option value="Date19">19</option>
+          <option value="Date20">20</option>
+           <option value="Date21">21</option>
+           <option value="Date22">22</option>
+           <option value="Date23">23</option>
+           <option value="Date24">24</option>
+           <option value="Date25">25</option>
+           <option value="Date26">26</option>
+          <option value="Date27">27</option>
+          <option value="Date28">28</option>
+          <option value="Date29">29</option>
+          <option value="Date30">30</option>
+          <option value="Date31">31</option>
+        </select>
+
+        <label for="Mes">Selecciona el mes</label>
+        <select id="Mes" name="Mes[]" size="3" multiple="multiple">
+          <option value="Enero">Enero</option>
+          <option value="Feberero">Febrero</option>
+          <option value="Marzo">Marzo</option>
+          <option value="Abril">Abril</option>
+          <option value="Mayo">Mayo</option>
+          <option value="Junio">Junio</option>
+          <option value="Julio">Julio</option>
+          <option value="Agosto">Agosto</option>
+          <option value="Septiembre">Septiembre</option>
+          <option value="Octubre">Octubre</option>
+          <option value="Noviembre">Noviembre</option>
+          <option value="Diciembre">Diciembre</option>
+        </select>
+
+      	
+        <br />
+
+        <label for="Telefono">Teléfono</label>
+        <input type="Telefono" id="Telefono" name="Telefono" placeholder="Introduzca su número de teléfono" />
+
+        <br />
+
+        <label for="CP">Código Postal</label>
+        <textarea name="CP" id="datosproovedor" placeholder="Escribe el código postal"></textarea>
+
+
+        <br />
+
+<label for="Direccion">Dirección</label>
+        <textarea name="Direccion" id="Direccion"  placeholder="Escriba su Dirección"></textarea>
+        <br />
+
+        <label for="foto">Imagen de Usuario</label>
+        <input id="foto" name="subirimagen" type="file" />
+
+<br />
+        <label for="TandC">Términos y condiciones</label>
+        <textarea name="TandC" id="TandC" readonly="readonly" placeholder="Al hacer click en registrar, usted acepta términos y condiciones de esta página así como venderle su alma a satán"></textarea>
+
+        <br />
+
+        <input type="submit" value="Registrar"></input>
+    	</form>
+     </div>
+
+     <footer>
+       <p>
+        PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
+        </p>
+     </footer>    
+    </div>
+  </body>
+</html>

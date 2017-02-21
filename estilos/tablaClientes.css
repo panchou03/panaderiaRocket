@@ -1,0 +1,86 @@
+.contenido {
+	height: 1050px;
+	width: 780px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.encabezado {
+	height: 15px;
+	background: black;
+	color:white;
+	font-size: 10px;
+	font-family: Helvetica;
+	text-align: left;
+	padding: 5px;
+	margin: 0;
+}
+
+
+.logo {
+	height: 70px;
+	background: #91817D;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+}
+
+.anuncio {
+	height: 250px;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+}
+
+.anuncioencabronado {
+	width: 720px;
+	height: 405px;
+	padding-left: 10px;
+	padding-right:  10px;
+	padding-top: 5px;
+}
+
+.secciontabla {
+	height: 250px;
+	background: #91817D;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	font: bold 90% monospace;
+}
+
+.tabla {
+	border-radius: 10px;
+	background-color: white;
+	color: black;
+	padding: 5px 10px;
+}
+
+caption {
+	border-radius: 10px;
+	padding: 5px 10px;
+}
+
+th, td {
+	border-radius: 10px;
+	background-color: black;
+	color: white;
+	padding: 5px 10px;
+}
+
+table {
+	border-spacing: 3px;
+}
+
+footer {
+	background: #f21;
+	height: 45px; 
+	width: 780px;
+	padding-top: 15px;
+}
+
+footer p{
+	font-family: arial;
+	font-size: 9px;
+	text-align: center;
+}

@@ -1,0 +1,83 @@
+.contenido {
+	height: 1050px;
+	width: 760px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.encabezado {
+	height: 15px;
+	background: black;
+	color:white;
+	font-size: 10px;
+	font-family: Arial;
+	text-align: left;
+	padding: 5px;
+	margin: 0;
+}
+
+.imagenlogo {
+	height: 70px;
+	background: #91817D;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+}
+
+.imagenanuncio {
+	height: 250px;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+}
+
+.registros {
+	height: 450px;
+	background: #91817D;
+	width: 760px;
+	padding-left: 10px;
+	padding-right:  10px;
+	
+}
+
+label {
+
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+input {
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+select {
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+textarea {
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+footer {
+	background: #f21;
+	height: 45px; 
+	width: 780px;
+	padding-top: 15px;
+}
+
+footer p{
+	font-family: arial;
+	font-size: 9px;
+	text-align: center;
+}
