@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="formPanes.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+	<div class="contenido">
+	  <div class="cero">
+	  	Bienvenido, <span class="palabraUser">Panchitou</span>
+	  </div>
+	  
+	  <div class="uno">
+		<img class="imgUno" src="anuncioEncabronado.jpg">	
+	  </div>
+
+	  <div class="dos">
+	  	<label for="Titulito" class="titulito">Registrar Producto</label>
+	 	<br /> <br />
+		<form name="formulario" id="formulario">
+		  <label for="Nombre">Nombre</label> <br />
+		  <textarea name="nombren" class="nombren" cols="20" rows="1"></textarea> <br /><br />
+		  <div id="nombre_error"></div>
+
+		  <label for="Descripción">Descripcion</label> <br />
+		  <textarea name="descripcion" class="descripcion" cols="25" rows="5"></textarea> <br /><br />
+
+		  <label for="PrecioPorDocena">Precio por Docena</label> <br />
+		  <textarea name="preciod" class="preciod" cols="7" rows="1"></textarea> <br /><br />
+
+		  <input type="radio" name="" ="producto">
+		  <label for="Pan">Pan</label>
+		  <input type="radio" name="producto">
+		  <label for="Gelatina">Gelatina</label>
+		  <input type="radio" name="producto">
+		  <label for="Pastel">Pastel</label>
+
+		  <div id="opc_error"></div> <br />
+	  	  
+		  <label for="foto">Imagen Producto</label>
+          <input id="foto" name="subirimagen" type="file" class="subirfoto" /> <br /><br />
+
+		  <button type="button" name="boton" onclick="valida()">Registrar</button>
+
+		  <script type="text/javascript">
+	  		function valida(input) {
+	  			opcion = false;
+	  			x = 0;
+	  			camposCheck = document.getElementsByName("producto");
+	  			var error = document.getElementById('opc_error');
+
+	  			while(x<camposCheck.length){
+	  				if(camposCheck[x].checked){
+	  					opcion = true;
+	  					console.log(opcion);
+	  				}
+	  				x++;
+	  			}
+	  			if(!opcion){
+	  				console.log(opcion);
+					error.innerText="Es necesario seleccionar categoria :(";
+				}
+	  		}
+	  		</script>	
+
+		</form> <br /> <br />
+		
+	  </div>
+
+	  <footer>
+		<p>
+          PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
+        </p>
+        <div class="redesSociales">
+        	<a href="URL-FACEBOOK" target="_blank"><img alt="siguenos en facebook" height="32" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="32" /></a>
+
+	        <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="32" src="http://3.bp.blogspot.com/-fnL839vxuao/UiXnFfyN17I/AAAAAAAABxc/VvcXJlZ65Ko/s1600/Google%252B+alt.png" title="siguenos en Google+" width="32" /></a>
+
+	        <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="32" src="http://1.bp.blogspot.com/-7BdDTcxhdi8/UiXnHrEjOqI/AAAAAAAAByU/2nzkRxah3X8/s1600/Twitter+alt+4.png" title="siguenos en Twitter" width="32" /></a>
+        </div>
+        
+	  </footer>
+	</div>
+  </body>
+</html>
