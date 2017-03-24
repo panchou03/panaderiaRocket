@@ -2,44 +2,95 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-  	<title></title>
-  	<link rel="stylesheet" type="text/css" href="homeDos.css">
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/nuevoHomeDos.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
   </head>
   <body>
-  	<div class="cero">
-      Bienvenido, <span class="palabraUser">Panchitou</span>
+
+  <div class="cero">
+    <div class="uno">
+
     </div>
 
-   	<div class="contenido">
+    <div class="unoYMedio">
+      Bienvenido, <span class="palabraUser">@Panchou</span>
 
-     <div class="uno">
-      <form action="panesUno.html" method="get">
-        <input type=image src="botonPanes.jpg" width="120" height="55" />
-        <input type=image src="botonPasteles.jpg" width="120" height="55" />
-        <input type=image src="botonGelatinas.jpg" width="120" height="55" />
-        <input type=image src="botonTerminos.jpg" width="120" height="55" />
-        <input type=image src="botonContacto.jpg" width="120" height="55" />
-      </form>
-     </div>
+    </div>
 
-     <div class="dos">
-      <img src="promoPasteles.jpg" id="promoPasteles" />
-     </div>
+    <div class="dos">
+      <ul class="nav">
+        <li><a href="#">Productos</a>
+          <ul>
+            <li><a href="#">Panes</a></li>
+            <li><a href="#">Pasteles</a></li>
+            <li><a href="#">Gelatinas</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Terminos y Condiciones</a></li>
+      </ul>
+    </div>
 
-     <div class="tres">
+    <div class="tres" id="rotator">
+      <a href="#" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();"> <img src="img/bannerUno.jpg" id="uno" /> </a>
+    </div>
+
+    <div class="cuatro">
+      <table>
+        <tr>
+          <td class="primero">
+            |°| PASTELES |°| <br />
+            <a href="#" class="sinSubrayado"> -De chocolate </a> <br />
+            <a href="#" class="sinSubrayado"> -De frutas </a> <br />
+            <a href="#" class="sinSubrayado"> -De sabores exoticos </a> <br />
+            <a href="#" class="sinSubrayado"> -Para niñ@s </a> <br />
+          </td>
+          <td class="segundo">
+            |°| PANES |°| <br />
+            <a href="#" class="sinSubrayado"> -Dulce </a> <br />
+            <a href="#" class="sinSubrayado"> -Salado </a> <br />
+            <a href="#" class="sinSubrayado"> -Integral </a> <br />
+            <a href="#" class="sinSubrayado"> -Soya </a> <br />
+          </td>
+          <td class="tercero">
+            |°| GELATINAS |°| <br />
+            <a href="#" class="sinSubrayado"> -De frutas </a> <br />
+            <a href="#" class="sinSubrayado"> -De leche </a> <br />
+            <a href="#" class="sinSubrayado"> -Marmoleadas </a> <br />
+            <a href="#" class="sinSubrayado"> -Para niñ@s </a> <br />
+          </td>
+          <td class="cuarto">
+            |°| ACERCA DE... |°| <br />
+            <a href="#" class="sinSubrayado"> -Terminos y condiciones </a> <br />
+            <a href="#" class="sinSubrayado"> -Contacto </a> <br />
+            <a href="#" class="sinSubrayado"> -Origen </a> <br />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cinco">
       <p>
-        <br />
-        <br />
-        Bienevenido a la tienda en linea de Panadería Rocket. Aqui atendemos a distribuidores que necesitan comprar grandes cantidades de panes, pasteles y gelatinas de exquisito sabor y hermosa apariencia.
-      </p>
-     </div>
-
-     <footer>
-       <p>
         PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
-        </p>
-     </footer>    
+      </p>
     </div>
+
+  </div>
+
+  <script type="text/javascript">
+    function cambiar () {
+      document.getElementById('uno').src = "img/bannerDos.jpg";
+    }
+
+    function volver () {
+      document.getElementById('uno').src = "img/bannerTres.jpg";
+    }
+
+    function principio () {
+      document.getElementById('uno').src = "img/bannerUno.jpg";
+    }
+  </script>
+
   </body>
 </html>
