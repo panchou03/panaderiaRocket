@@ -2,60 +2,216 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-  	<title></title>
-  	<link rel="stylesheet" type="text/css" href="pagoUno.css">
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/pagoUno.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
   </head>
   <body>
-  	<div class="cero">
-      Bienvenido, <span class="palabraUser">Panchitou</span>
+
+  <div class="cero">
+    <div class="uno">
+      <img src="img/bannerPrincipal.jpg" class="logo" >
     </div>
 
-   	<div class="contenido">
+    <div class="unoYMedio">
+      Bienvenido, <span class="palabraUser">@Panchou</span>
 
-      <div class="puntocinco"></div>
+    </div>
 
-      <div class="uno">
-        <img src="bannerConfirmacion.jpg" id="bannerConfirm" />
-      </div>
+    <div class="dos">
+      <ul class="nav">
+        <li><a href="#">Productos</a>
+          <ul>
+            <li><a href="#">Panes</a></li>
+            <li><a href="#">Pasteles</a></li>
+            <li><a href="#">Gelatinas</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Terminos y Condiciones</a></li>
+      </ul>
+    </div>
 
-      <div class="dos">
-        <form action="pagoDos.html" method="get">
-          <table>
-            <br />
-            <caption>Productos</caption>
-            <colgroup>
-              <col></col>
-            </colgroup>
-            <thead>
-              <tr>
-                <td>Nombre</td>
-                <td>Descripción</td>
-                <td>Cantidad en Docenas</td>
-                <td>Total producto</td>
-                <th>Monto Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Magdalena</td>
-                <td>Pan individual, suave, tambien llamado mantecada</td>
-                <td>10</td>
-                <td>$3,750.00</td>
-                <td>$3,750.00</td>
-              </tr>
-              <tr>
-                <td>Magdalena</td>
-                <td>Pan en forma de semi-circulo con una costra de azucar</td>
-                <td>10</td>
-                <td>$3,750.00</td>
-                <td>$7,500.00</td>
-              </tr>
-            </tbody>
-          </table>
-          <input type="submit" name="confirmarCompra" value="Confirmar compra" />
+    <div class="tres">
+      <div class="puntoUno">
+        <img src="img/bannerEntrega.jpg" />
+        <br /> <b>Seleccione la paqueteria de su preferencia</b> <br /> <br />
+        <form action="#" method="get">
+          <input type="radio" id="opc1" name="opc" value="350" onclick="envioUno();" />
+          <img src="img/envio3.png" height="30" width="100">
+          <label for="opc1">1 a 2 días - $350.00</label>
+          <br /> <br />
+          <input type="radio" id="opc2" name="opc" value="250" onclick="envioDos();" />
+          <img src="img/envio2.png" height="40" width="100">
+          <label for="opc2">2 a 3 días - $250.00</label>
+          <br /> <br />
+          <input type="radio" id="opc3" name="opc" value="180" onclick="envioTres();" />
+          <img src="img/envio1.jpg" height="30" width="100">
+          <label for="opc3">3 a 4 días - $180.00 </label>
+          <br /> <br />
         </form>
+        <br /> <br />
+      </div>
+      <div class="puntoDos">
+        <img src="img/bannerPago.jpg" />
+        <br /> <b>Seleccione el metodo de Pago</b> <br /> <br />
+        <form id="seleccion" action="#" method="get">
+          <input type="radio" id="opc4" name="opc" value="opcTarjeta" onclick="seleccionadoUno();" />
+          <label for="opc4">Tarjeta de Credito</label> <br />
+          <img src="img/tarjetas.png" height="100" width="300" /> <br />
+          <label for="numeroDeTarjeta">Numero de Tarjeta</label>
+          <input type="text" id="noTarjeta" class="noTarjeta" name="numeroDeTarjeta" disabled="disabled" /> <br />
+          <label for="numeroDeTarjeta">Fecha de Tarjeta</label>
+          <input type="text" id="feTarjeta" class="feTarjeta" name="numeroDeTarjeta" disabled="disabled" /> <br /> <br /> <br />
+          
+          <input type="radio" id="opc5" name="opc" value="opcRegalo" onclick="seleccionadoDos();" />
+          <label for="opc5">Tarjeta de Regalo</label> <br />
+          <img src="img/tarjetaRegalo.jpg" height="105" width="185" /> <br />
+          <label for="codigoTar">Código de la Tarjeta de Regalo</label>
+          <input type="text" id="coTarjeta" class="coTarjeta" name="codigoDeRegalo" disabled="disabled" /> <br /> <br />
+        </form>
+        <br /> <br />
+      </div>
+      <div class="puntoTres">
+        <img src="img/bannerConfirmacion.jpg" />
+        <br />
+        <table>
+          <br /> <br /> <br />
+          <b>Confirmación<b>
+          <br />
+          <colgroup>
+            <col id="col1" />
+            <col id="col2" />
+            <col id="col3" />
+            <col id="col4" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th> Nombre </th>
+              <th> Descripción </th>
+              <th> Cantidad en Docenas </th>
+              <th> Total Producto </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mantecada</td>
+              <td>Pan individual, suave, tambien llamado mantecada</td>
+              <td>2</td>
+              <td>200</td>
+            </tc>
+            <tr>
+              <td>Concha</td>
+              <td>Pan en forma de semi-circulo con una costra de azucar</td>
+              <td>2</td>
+              <td>250</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <br /> <br /> <b>Total</b> <br />
+          <colgroup>
+            <col id="informacion" />
+            <col id="totalTabla" />
+          </colgroup>
+          <tbody>
+          <tr>
+            <th>Total de Productos</th>
+            <td id="totalPro">450</td>
+          </tr>
+          <tr>
+            <th>Costo de Envio</th>
+            <td id="costoEnvio"></td>
+          </tr>
+          <tr>
+            <th>Total</th>
+            <td id="totalTotaloso"></td>
+          </tr>
+          </tbody>
+        </table>
+        <br /> <br /> <button><a href="#" class="sinSubrayado">Atras</a></button>
+        <button><a href="#" class="sinSubrayado">Confirmar</a></button> <br /> <br />
       </div>
     </div>
+
+    <div class="cuatro">
+      <table>
+        <tr>
+          <td class="primero">
+            |°| PASTELES |°| <br />
+            <a href="#" class="sinSubrayado"> -De chocolate </a> <br />
+            <a href="#" class="sinSubrayado"> -De frutas </a> <br />
+            <a href="#" class="sinSubrayado"> -De sabores exoticos </a> <br />
+            <a href="#" class="sinSubrayado"> -Para niñ@s </a> <br />
+          </td>
+          <td class="segundo">
+            |°| PANES |°| <br />
+            <a href="#" class="sinSubrayado"> -Dulce </a> <br />
+            <a href="#" class="sinSubrayado"> -Salado </a> <br />
+            <a href="#" class="sinSubrayado"> -Integral </a> <br />
+            <a href="#" class="sinSubrayado"> -Soya </a> <br />
+          </td>
+          <td class="tercero">
+            |°| GELATINAS |°| <br />
+            <a href="#" class="sinSubrayado"> -De frutas </a> <br />
+            <a href="#" class="sinSubrayado"> -De leche </a> <br />
+            <a href="#" class="sinSubrayado"> -Marmoleadas </a> <br />
+            <a href="#" class="sinSubrayado"> -Para niñ@s </a> <br />
+          </td>
+          <td class="cuarto">
+            |°| ACERCA DE... |°| <br />
+            <a href="#" class="sinSubrayado"> -Terminos y condiciones </a> <br />
+            <a href="#" class="sinSubrayado"> -Origen </a> <br />
+            <a href="#" class="sinSubrayado"> -Contacto </a> <br />
+            <a href="URL-FACEBOOK" target="_blank"><img alt="siguenos en facebook" height="25" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="25" /></a>
+            <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="25" src="http://3.bp.blogspot.com/-fnL839vxuao/UiXnFfyN17I/AAAAAAAABxc/VvcXJlZ65Ko/s1600/Google%252B+alt.png" title="siguenos en Google+" width="25" /></a>
+            <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="25" src="http://1.bp.blogspot.com/-7BdDTcxhdi8/UiXnHrEjOqI/AAAAAAAAByU/2nzkRxah3X8/s1600/Twitter+alt+4.png" title="siguenos en Twitter" width="25" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cinco">
+      <p>
+        PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
+      </p>
+      <img src="img/logoNuevo.png" class="logoFinal" />
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function seleccionadoUno() {
+      document.getElementById('noTarjeta').disabled = false;
+      document.getElementById('feTarjeta').disabled = false;
+      document.getElementById('coTarjeta').disabled = true;
+    }
+
+    function seleccionadoDos() {
+      document.getElementById('coTarjeta').disabled = false;
+      document.getElementById('noTarjeta').disabled = true;
+      document.getElementById('feTarjeta').disabled = true;
+    }
+
+    var valorDHL = parseInt(document.getElementById('opc1').value);
+    var valorFedex = parseInt(document.getElementById('opc2').value);
+    var valorEstafeta = parseInt(document.getElementById('opc3').value);
+    var totalProductos = parseInt(document.getElementById('totalPro').innerHTML);
+
+    function envioUno() {
+      document.getElementById('costoEnvio').innerHTML = document.getElementById('opc1').value;
+      document.getElementById('totalTotaloso').innerHTML = (valorDHL+totalProductos);
+    }
+
+    function envioDos() {
+      document.getElementById('costoEnvio').innerHTML = document.getElementById('opc2').value;
+      document.getElementById('totalTotaloso').innerHTML = (valorFedex+totalProductos);
+    }
+
+    function envioTres() {
+      document.getElementById('costoEnvio').innerHTML = document.getElementById('opc3').value;
+      document.getElementById('totalTotaloso').innerHTML = (valorEstafeta+totalProductos);
+    }
+  </script>
+
   </body>
 </html>
