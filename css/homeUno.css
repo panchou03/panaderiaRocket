@@ -36,9 +36,13 @@ input {
 }
 
 .uno {
-	background-color: #df2615;
+	background-color: #a8918b;
 	height: 100px;
 	width: 920px;
+	border-radius: 10px;
+}
+
+.logo {
 	border-radius: 10px;
 }
 
@@ -149,4 +153,9 @@ td.tercero {
 	color: black;
 	font-size: 10px;
 	text-align: center;
+}
+
+.logoFinal {
+	height: 70px;
+	width: auto;
 }
