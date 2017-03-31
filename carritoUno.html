@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/panesDos.css">
+    <link rel="stylesheet" type="text/css" href="css/carritoUno.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
@@ -35,28 +35,12 @@
     <div class="tres">
       <img src="img/bannerCarrito.jpg" />
       <br /> <br />
-      <table class="carrito">
-        <thead>
-          <th>Producto</th>
-          <th>Cantidad</th>
-          <th>Precio</th>
-          <th>Seleccionar</th>
-        </thead>
-        <tr>
-          <td>Pastel Doble Chocolate</td>
-          <td>1</td>
-          <td>275.00</td>
-          <td><input type="radio" id="opc1" name="opc" value="pastelDobleChocolate" /></td>
-        </tr>
-        <tr>
-          <td>Gelatina Frutos Rojos</td>
-          <td>1</td>
-          <td>175.00</td>
-          <td><input type="radio" id="opc2" name="opc" value="gelatinaFrutosRojos" /></td>
-        </tr>
-      </table>
+      <ul class="bla">
+        <li id="e1"><img src="img/panes/pan2.png" id="fotos"><br />Concha<br /><span class="cantidad">1</span> Docena(s)<br />$<span class="total">250.00</span><br /><button id="borrame" onclick="eliminar1();">borrame</button></li>
+        <li id="e2"><img src="img/pasteles/pastel3.png" id="fotos"><br />Pastel Doble Chocolate<br /><span class="cantidad">1</span> Pastel(es)<br />$<span class="total">375.00</span><br /><button id="borrame" onclick="eliminar2();">borrame</button></li>
+        <li id="e3"><img src="img/gelatinas/gelatina3.png" id="fotos"><br />Gelatina de Frutos Rojos<br /><span class="cantidad">1</span> Gelatina(s)<br />$<span class="total">275.00</span><br /><button id="borrame" onclick="eliminar3();">borrame</button></li>
+      </ul>
       <br /> <br />
-      <button id="eliminar" onclick="eliminar();">Eliminar de la lista</button> <br /> <br />
       <a href="pagoUno.html" class="sinSubrayado"><button>Comprar</button></a> <br /><br />
     </div>
 
@@ -105,8 +89,17 @@
     </div>
   </div>
 
-  <script type="text/javascript">
-    
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" >
+    function eliminar1 (){
+        $('#e1').remove();
+    }
+    function eliminar2 (){
+        $('#e2').remove();
+    }
+    function eliminar3 (){
+        $('#e3').remove();
+    }
   </script>
 
   </body>

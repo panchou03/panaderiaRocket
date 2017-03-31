@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/contactoUno.css">
+    <link rel="stylesheet" type="text/css" href="css/contactoTres.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
@@ -14,7 +14,15 @@
     </div>
 
     <div class="unoYMedio">
-      Bienvenido, <span class="palabraUser">@Panchou</span>
+      <form action="contactoUno.html" method="get">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="user" name="user" placeholder="Usuario" />
+        <label for="pass">Contraseña</label>
+        <input type="password" id="pass" name="pass" placeholder="******" />
+        <input type="submit" value="Entrar" class="login" onclick="verificar();"></input>
+        <label for="nuevoU">¿Eres nuevo?</label>
+        <a href="nuevoUsuarioUno.html" class="sinSubrayado"><span>Crear Cuenta</span></a>
+      </form>
     </div>
 
     <div class="dos">
@@ -41,10 +49,13 @@
         oh tambien pasarte por nuestras redes sociales y dejarnos sugerencias y comentarios.
         </b> <br /> <br />
         <form action="contactoDos.html" method="get">
-          <label for="user"><span class="obligatorio">@Panchou</span>, Nos interesa tu opinión</label> <br /><br />
+          <label for="nombreM">Nombre<span class="obligatorio">*</span></label>
+          <input type="text" name="nombreM" id="nombreM" required="required" /> <br /><br />
+          <label for="correoM">Correo<span class="obligatorio">*</span></label>
+          <input type="text" name="correoM" id="correoM" required="required" /> <br /><br />
           <label for="textoM">Mensaje<span class="obligatorio">*</span></label> <br />
           <textarea id="textoM" required="required"></textarea> <br /><br />
-          <a href="contactoDos.html" class="sinSubrayado"><button id="bttnEnviar">Enviar</button></a>
+          <button id="bttnEnviar" onclick="validaForm();">Enviar</button>
         </form>
       </div>
       
@@ -97,7 +108,13 @@
   </div>
 
   <script type="text/javascript">
-    
+    function validaForm() {
+      var email = document.getElementById('correoM').value;
+      expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if ( !expr.test(email) ) {
+          alert("Error: La dirección de correo " + email + " es incorrecta.");
+      }
+    }
   </script>
 
   </body>

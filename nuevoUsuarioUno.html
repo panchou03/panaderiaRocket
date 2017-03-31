@@ -36,20 +36,20 @@
     <div class="tres">
       <img src="img/bannerNuevaCuenta.jpg" /> <br /> <br />
 
-      <form action="nuevoUsuarioDos.html" method="get">
-        <label for="nombreC">Nombre </label>
-        <input type="text" name="nombreC" id="nombreC" /> <br /> <br />
-        <label for="correoC">Correo </label>
-        <input type="text" name="correoC" id="correoC" /> <br /> <br />
+      <form action="nuevoUsuarioDos.html" method="get" id="cliente" name="formu">
+        <label for="nombreC">Nombre<span class="obligatorio">*</span></label>
+        <input type="text" name="nombreC" id="nombreC" required="required" /> <br /> <br />
+        <label for="correoC">Correo<span class="obligatorio">*</span></label>
+        <input type="text" name="correoC" id="correoC" required="required" /> <br /> <br />
         <label for="telefonoC">Telefono </label>
         <input type="text" name="telefonoC" id="telefonoC" /> <br /> <br />
-        <label for="contrasenia1C">Contraseña </label>
-        <input type="password" name="contrasenia1C" id="contrasenia1C" /> <br /> <br />
-        <label for="contrasenia2C">Confirmar contraseña </label>
-        <input type="password" name="contrasenia2C" id="contrasenia2C" /> <br /> <br />
-        <label for="direccionC">Dirección </label> <br />
-        <textarea id="direccionC"></textarea> <br /> <br />
-        <input type="submit" name="botonNuevo" id="botonNuevo" value="Registrarme" />
+        <label for="contrasenia1C">Contraseña<span class="obligatorio">*</span></label>
+        <input type="password" name="contrasenia1C" id="contrasenia1C" required="required" /> <br /> <br />
+        <label for="contrasenia2C">Confirmar contraseña<span class="obligatorio">*</span></label>
+        <input type="password" name="contrasenia2C" id="contrasenia2C" required="required" /> <br /> <br />
+        <label for="direccionC">Dirección<span class="obligatorio">*</span></label> <br />
+        <textarea id="direccionC" required="required"></textarea> <br /> <br />
+        <input type="submit" name="botonNuevo" id="botonNuevo" value="Registrarme" onclick="validaForm();" />
       </form>
       <br />
     </div>
@@ -101,7 +101,19 @@
   </div>
 
   <script type="text/javascript">
-
+    function validaForm() {
+      var email = document.getElementById('correoC').value;
+      expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if ( !expr.test(email) ) {
+          alert("Error: La dirección de correo " + email + " es incorrecta.");
+      }
+      
+      var pass1 = document.getElementById('contrasenia1C').value;
+      var pass2 = document.getElementById('contrasenia2C').value;
+      if ( pass1 != pass2 ){
+        alert("las contraseñas son diferentes :(");
+      }
+    }
   </script>
 
   </body>
