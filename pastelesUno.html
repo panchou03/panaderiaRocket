@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/homeDos.css">
+    <link rel="stylesheet" type="text/css" href="css/pastelesUno.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
@@ -15,7 +15,6 @@
 
     <div class="unoYMedio">
       Bienvenido, <span class="palabraUser">@Panchou</span>
-
     </div>
 
     <div class="dos">
@@ -33,8 +32,41 @@
       </ul>
     </div>
 
-    <div class="tres" id="rotator">
-      <img src="img/bannerUno.jpg" id="uno" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();" />
+    <div class="tres">
+      <div class="puntoUno">
+        <img src="img/bannerPasteles.jpg" />
+        <br /> <br />
+        <b>| Catalogo de Pasteles |</b>
+        <div class="barraBusqueda">
+          <form action="productoBuscado.html" method="get">
+            <label for="busqueda">Palabra a Buscar </label>
+            <input type="text" name="palabraClave" id="palabraClave" />
+            <label for="filtros">Filtros </label>
+            <select>
+              <option value="chocolate">Chocolate</option>
+              <option value="frutas">Frutas</option>
+              <option value="exoticos">Exoticos</option>
+              <option value="ninios">Para niñ@s</option>
+            </select>
+            <a href="productoBuscado.html" class="sinSubrayado"><button class="bttnBuscar">Buscar</button></a>
+          </form>
+          <br />
+        </div>
+        
+      </div>
+      <div class="puntoDos" id="principal">
+        <ul class="bla">
+          <li><a href="pastelesDos.html" class="sinSubrayadoDos"><img src="img/pasteles/pastel1.png" id="pasteles"><br />Zanahoria<br />Mas información</a></li>
+          <li><a href="pastelesDos.html" class="sinSubrayadoDos"><img src="img/pasteles/pastel2.png" id="pasteles"><br />Cajeta<br />Mas información</a></li>
+          <li><a href="pastelesDos.html" class="sinSubrayadoDos"><img src="img/pasteles/pastel3.png" id="pasteles"><br />Chocolate<br />Mas información</a></li>
+          <li><a href="pastelesDos.html" class="sinSubrayadoDos"><img src="img/pasteles/pastel4.png" id="pasteles"><br />Nuez<br />Mas información</a></li>
+          <li><a href="pastelesDos.html" class="sinSubrayadoDos"><img src="img/pasteles/pastel5.png" id="pasteles"><br />Chocolate con Fresas<br />Mas información</a></li>
+        </ul>
+        <br /> <b>Todos nuestros productos son hechos artesanalmente y con recetas que combinan lo antiguo y lo mas nuevo</b> <br /> <br />
+      </div>
+      <div class="puntoTres">
+        
+      </div>
     </div>
 
     <div class="cuatro">
@@ -63,9 +95,9 @@
           </td>
           <td class="cuarto">
             |°| ACERCA DE... |°| <br />
-            <a href="terminosUno.html" class="sinSubrayado"> -Terminos y condiciones </a> <br />
+            <a href="#" class="sinSubrayado"> -Terminos y condiciones </a> <br />
             <a href="origenUno.html" class="sinSubrayado"> -Origen </a> <br />
-            <a href="contactoUno.html" class="sinSubrayado"> -Contacto </a> <br />
+            <a href="#" class="sinSubrayado"> -Contacto </a> <br />
             <a href="URL-FACEBOOK" target="_blank"><img alt="siguenos en facebook" height="25" src="img/face.png" title="siguenos en facebook" width="25" /></a>
             <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="25" src="img/googleplus.png" title="siguenos en Google+" width="25" /></a>
             <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="25" src="img/twitter.png" title="siguenos en Twitter" width="25" /></a>
@@ -80,21 +112,10 @@
       </p>
       <img src="img/logoNuevo.png" class="logoFinal" />
     </div>
-
   </div>
 
   <script type="text/javascript">
-    function cambiar () {
-      document.getElementById('uno').src = "img/bannerDos.jpg";
-    }
 
-    function volver () {
-      document.getElementById('uno').src = "img/bannerTres.jpg";
-    }
-
-    function principio () {
-      document.getElementById('uno').src = "img/bannerUno.jpg";
-    }
   </script>
 
   </body>

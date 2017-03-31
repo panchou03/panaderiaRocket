@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/homeDos.css">
+    <link rel="stylesheet" type="text/css" href="css/origenUno.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
@@ -15,7 +15,6 @@
 
     <div class="unoYMedio">
       Bienvenido, <span class="palabraUser">@Panchou</span>
-
     </div>
 
     <div class="dos">
@@ -33,8 +32,19 @@
       </ul>
     </div>
 
-    <div class="tres" id="rotator">
-      <img src="img/bannerUno.jpg" id="uno" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();" />
+    <div class="tres">
+      <img src="img/bannerOrigen.jpg" />
+      <br /> <br />
+      <div class="dentroDe">
+        <b>
+          Panadería Rocket C.A. de C.V. data del año 1995, en una pequeña panadería que surgio del esfuerzo de una familia humilde. <br />
+          Desde ese entonces su negocio era repartir el pan a las distintas tiendas del pueblo para que se pudiera vender y las personas pudieran consumirlo.<br />Su arte culinario ha pasado de generación en generación en la familia Armstrong, haciendo que el sabor de dos decadas atras se mantenga y no perezca.<br />
+          Ahora en estos tiempos modernos, la panaderia a buscado superarse y expander sus alcances, y es por eso que llegaron a esta tienda en linea. <br />
+          De parte de todo el personal en Panadería Rocket; le deseamos que disfrute al degustar nuestros maravillosos productos, GRACIAS.
+        </b>
+        <img src="img/teamRocket.png" id="teamRocket" />
+      </div>
+      <br /> <br />
     </div>
 
     <div class="cuatro">
@@ -80,21 +90,10 @@
       </p>
       <img src="img/logoNuevo.png" class="logoFinal" />
     </div>
-
   </div>
 
   <script type="text/javascript">
-    function cambiar () {
-      document.getElementById('uno').src = "img/bannerDos.jpg";
-    }
-
-    function volver () {
-      document.getElementById('uno').src = "img/bannerTres.jpg";
-    }
-
-    function principio () {
-      document.getElementById('uno').src = "img/bannerUno.jpg";
-    }
+    
   </script>
 
   </body>

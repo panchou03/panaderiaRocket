@@ -2,77 +2,126 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-  	<title></title>
-  	<link rel="stylesheet" type="text/css" href="panesUno.css">
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/panesUno.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
   <body>
-  	<div class="cero">
-      Bienvenido, <span class="palabraUser">Panchitou</span>
+
+  <div class="cero">
+    <div class="uno">
+      <a href="homeUno.html"><img src="img/bannerPrincipal.jpg" class="logo" /></a>
     </div>
 
-   	<div class="contenido">
+    <div class="unoYMedio">
+      Bienvenido, <span class="palabraUser">@Panchou</span>
+    </div>
 
-     <div class="uno">
-      <img src="bannerPanes.jpg" id="bannerPanes" />
-     </div>
+    <div class="dos">
+      <ul class="nav">
+        <li><a href="productosUno.html">Productos</a>
+          <ul>
+            <li><a href="panesUno.html">Panes</a></li>
+            <li><a href="pastelesUno.html">Pasteles</a></li>
+            <li><a href="gelatinasUno.html">Gelatinas</a></li>
+          </ul>
+        </li>
+        <li><a href="contactoUno.html">Contacto</a></li>
+        <li><a href="comoComprarUno.html">Como Comprar</a></li>
+        <li><a href="terminosUno.html">Terminos y Condiciones</a></li>
+      </ul>
+    </div>
 
-     <div class="dos">
-      <form action="panesUno.html" method="get">
-        <input type=image src="botonPanes.jpg" width="120" height="55">
-        <input type=image src="botonPasteles.jpg" width="120" height="55">
-        <input type=image src="botonGelatinas.jpg" width="120" height="55">
-        <input type=image src="botonTerminos.jpg" width="120" height="55">
-        <input type=image src="botonContacto.jpg" width="120" height="55">
-      </form>
-     </div>
-
-     <div class="tres">
-      <form action="panesDos.html" method="get">
-        <table>
-          <caption>Productos</caption>
-          <colgroup>
-            <col></col>
-          </colgroup>
-          <thead>
-            <tr>
-              <th>Foto</th>
-              <td>Nombre</td>
-              <td>Descripción</td>
-              <td>Precio por Docena</td>
-              <td>Cantidad</td>
-              <th>Agregar al Carrito</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><img src="magdalena.png" width="100" height="100"></td>
-              <td>Magdalena</td>
-              <td>Pan individual, suave, tambien llamado mantecada</td>
-              <td>$375.00</td>
-              <td><input type="text" name="cantidadPanes"></td>
-              <td><input type="checkbox" id="opc1" name="opc" value="magdalena" /></td>
-            </tr>
-            <tr>
-              <td><img src="concha.png" width="100" height="100"></td>
-              <td>Magdalena</td>
-              <td>Pan en forma de semi-circulo con una costra de azucar</td>
-              <td>$375.00</td>
-              <td><input type="text" name="cantidadPanes"></td>
-              <td><input type="checkbox" id="opc2" name="opc" value="concha" /></td>
-            </tr>
-          </tbody>
-        </table>
-        <br />
-        <input type="submit" name="agregarAlCarrito" value="Agregar al Carrito" />
+    <div class="tres">
+      <div class="puntoUno">
+        <img src="img/bannerPanes.jpg" />
         <br /> <br />
-      </form>
-     </div>
-     <footer>
-       <p>
-        PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
-        </p>
-     </footer>    
+        <b>| Catalogo de Panes |</b>
+        <div class="barraBusqueda">
+          <form action="productoBuscado.html" method="get">
+            <label for="busqueda">Palabra a Buscar </label>
+            <input type="text" name="palabraClave" id="palabraClave" />
+            <label for="filtros">Filtros </label>
+            <select>
+              <option value="dulces">Dulces</option>
+              <option value="salados">Salados</option>
+              <option value="integrales">Integrales</option>
+              <option value="soya">Soya</option>              
+            </select>
+            <a href="productoBuscado.html" class="sinSubrayado"><button class="bttnBuscar">Buscar</button></a>
+          </form>
+          <br />
+        </div>
+        
+      </div>
+      <div class="puntoDos" id="principal">
+        <ul class="bla">
+          <li><a href="panesDos.html" class="sinSubrayadoDos"><img src="img/panes/pan1.png" id="panes"><br />Bizquet<br />Mas información</a></li>
+          <li><a href="panesDos.html" class="sinSubrayadoDos"><img src="img/panes/pan2.png" id="panes"><br />Concha<br />Mas información</a></li>
+          <li><a href="panesDos.html" class="sinSubrayadoDos"><img src="img/panes/pan3.png" id="panes"><br />Dona<br />Mas información</a></li>
+          <li><a href="panesDos.html" class="sinSubrayadoDos"><img src="img/panes/pan4.png" id="panes"><br />Mantecada<br />Mas información</a></li>
+        </ul>
+        <br /> <b>Todos nuestros productos son hechos artesanalmente y con recetas que combinan lo antiguo y lo mas nuevo</b> <br /> <br />
+      </div>
+      <div class="puntoTres">
+        
+      </div>
     </div>
+
+    <div class="cuatro">
+      <table>
+        <tr>
+          <td class="primero">
+            |°| PASTELES |°| <br />
+            <a href="#" class="sinSubrayado"> -De chocolate </a> <br />
+            <a href="#" class="sinSubrayado"> -De frutas </a> <br />
+            <a href="#" class="sinSubrayado"> -De sabores exoticos </a> <br />
+            <a href="#" class="sinSubrayado"> -Para niñ@s </a> <br />
+          </td>
+          <td class="segundo">
+            |°| PANES |°| <br />
+            <a href="#" class="sinSubrayado"> -Dulce </a> <br />
+            <a href="#" class="sinSubrayado"> -Salado </a> <br />
+            <a href="#" class="sinSubrayado"> -Integral </a> <br />
+            <a href="#" class="sinSubrayado"> -Soya </a> <br />
+          </td>
+          <td class="tercero">
+            |°| GELATINAS |°| <br />
+            <a href="#" class="sinSubrayado"> -De frutas </a> <br />
+            <a href="#" class="sinSubrayado"> -De leche </a> <br />
+            <a href="#" class="sinSubrayado"> -Marmoleadas </a> <br />
+            <a href="#" class="sinSubrayado"> -Para niñ@s </a> <br />
+          </td>
+          <td class="cuarto">
+            |°| ACERCA DE... |°| <br />
+            <a href="#" class="sinSubrayado"> -Terminos y condiciones </a> <br />
+            <a href="origenUno.html" class="sinSubrayado"> -Origen </a> <br />
+            <a href="#" class="sinSubrayado"> -Contacto </a> <br />
+            <a href="URL-FACEBOOK" target="_blank"><img alt="siguenos en facebook" height="25" src="img/face.png" title="siguenos en facebook" width="25" /></a>
+            <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="25" src="img/googleplus.png" title="siguenos en Google+" width="25" /></a>
+            <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="25" src="img/twitter.png" title="siguenos en Twitter" width="25" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cinco">
+      <p>
+        PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
+      </p>
+      <img src="img/logoNuevo.png" class="logoFinal" />
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" >
+    /*function agrandar () {
+      $('.panes').animate({'width':260,'height':260});
+    }
+    function achicar () {
+      $('.panes').animate({'width':130,'height':130});
+    }*/
+  </script>
+
   </body>
 </html>

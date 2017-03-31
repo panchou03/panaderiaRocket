@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/homeDos.css">
+    <link rel="stylesheet" type="text/css" href="css/panesDos.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
@@ -15,7 +15,6 @@
 
     <div class="unoYMedio">
       Bienvenido, <span class="palabraUser">@Panchou</span>
-
     </div>
 
     <div class="dos">
@@ -33,8 +32,32 @@
       </ul>
     </div>
 
-    <div class="tres" id="rotator">
-      <img src="img/bannerUno.jpg" id="uno" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();" />
+    <div class="tres">
+      <img src="img/bannerCarrito.jpg" />
+      <br /> <br />
+      <table class="carrito">
+        <thead>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Seleccionar</th>
+        </thead>
+        <tr>
+          <td>Pastel Doble Chocolate</td>
+          <td>1</td>
+          <td>275.00</td>
+          <td><input type="radio" id="opc1" name="opc" value="pastelDobleChocolate" /></td>
+        </tr>
+        <tr>
+          <td>Gelatina Frutos Rojos</td>
+          <td>1</td>
+          <td>175.00</td>
+          <td><input type="radio" id="opc2" name="opc" value="gelatinaFrutosRojos" /></td>
+        </tr>
+      </table>
+      <br /> <br />
+      <button id="eliminar" onclick="eliminar();">Eliminar de la lista</button> <br /> <br />
+      <a href="pagoUno.html" class="sinSubrayado"><button>Comprar</button></a> <br /><br />
     </div>
 
     <div class="cuatro">
@@ -80,21 +103,10 @@
       </p>
       <img src="img/logoNuevo.png" class="logoFinal" />
     </div>
-
   </div>
 
   <script type="text/javascript">
-    function cambiar () {
-      document.getElementById('uno').src = "img/bannerDos.jpg";
-    }
-
-    function volver () {
-      document.getElementById('uno').src = "img/bannerTres.jpg";
-    }
-
-    function principio () {
-      document.getElementById('uno').src = "img/bannerUno.jpg";
-    }
+    
   </script>
 
   </body>

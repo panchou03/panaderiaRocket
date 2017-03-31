@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/homeDos.css">
+    <link rel="stylesheet" type="text/css" href="css/nuevoUsuarioUno.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
@@ -33,8 +33,25 @@
       </ul>
     </div>
 
-    <div class="tres" id="rotator">
-      <img src="img/bannerUno.jpg" id="uno" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();" />
+    <div class="tres">
+      <img src="img/bannerNuevaCuenta.jpg" /> <br /> <br />
+
+      <form action="nuevoUsuarioDos.html" method="get">
+        <label for="nombreC">Nombre </label>
+        <input type="text" name="nombreC" id="nombreC" /> <br /> <br />
+        <label for="correoC">Correo </label>
+        <input type="text" name="correoC" id="correoC" /> <br /> <br />
+        <label for="telefonoC">Telefono </label>
+        <input type="text" name="telefonoC" id="telefonoC" /> <br /> <br />
+        <label for="contrasenia1C">Contraseña </label>
+        <input type="password" name="contrasenia1C" id="contrasenia1C" /> <br /> <br />
+        <label for="contrasenia2C">Confirmar contraseña </label>
+        <input type="password" name="contrasenia2C" id="contrasenia2C" /> <br /> <br />
+        <label for="direccionC">Dirección </label> <br />
+        <textarea id="direccionC"></textarea> <br /> <br />
+        <input type="submit" name="botonNuevo" id="botonNuevo" value="Registrarme" />
+      </form>
+      <br />
     </div>
 
     <div class="cuatro">
@@ -84,17 +101,7 @@
   </div>
 
   <script type="text/javascript">
-    function cambiar () {
-      document.getElementById('uno').src = "img/bannerDos.jpg";
-    }
 
-    function volver () {
-      document.getElementById('uno').src = "img/bannerTres.jpg";
-    }
-
-    function principio () {
-      document.getElementById('uno').src = "img/bannerUno.jpg";
-    }
   </script>
 
   </body>

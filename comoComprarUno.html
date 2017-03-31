@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/homeDos.css">
+    <link rel="stylesheet" type="text/css" href="css/comoComprarUno.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
@@ -15,7 +15,6 @@
 
     <div class="unoYMedio">
       Bienvenido, <span class="palabraUser">@Panchou</span>
-
     </div>
 
     <div class="dos">
@@ -33,8 +32,14 @@
       </ul>
     </div>
 
-    <div class="tres" id="rotator">
-      <img src="img/bannerUno.jpg" id="uno" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();" />
+    <div class="tres">
+      <img src="img/bannerTutorial.jpg" />
+      <br /> <br />
+      <img src="img/ups.png" class="imgError" /> <br />
+      <b>
+        Seccion en construcción, lamentamos las molestias...
+      </b>
+      <br /> <br /> <br /> <br /> <br /> <br />
     </div>
 
     <div class="cuatro">
@@ -80,21 +85,10 @@
       </p>
       <img src="img/logoNuevo.png" class="logoFinal" />
     </div>
-
   </div>
 
   <script type="text/javascript">
-    function cambiar () {
-      document.getElementById('uno').src = "img/bannerDos.jpg";
-    }
-
-    function volver () {
-      document.getElementById('uno').src = "img/bannerTres.jpg";
-    }
-
-    function principio () {
-      document.getElementById('uno').src = "img/bannerUno.jpg";
-    }
+    
   </script>
 
   </body>

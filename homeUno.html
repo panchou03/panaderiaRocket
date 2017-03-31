@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/homeUno.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
+    <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
   <body>
 
   <div class="cero">
     <div class="uno">
-      <img src="img/bannerPrincipal.jpg" class="logo" >
+      <a href="homeUno.html"><img src="img/bannerPrincipal.jpg" class="logo" /></a>
     </div>
 
     <div class="unoYMedio">
@@ -19,26 +20,28 @@
         <label for="pass">Contraseña</label>
         <input type="password" id="pass" name="pass" placeholder="******" />
         <input type="submit" value="Entrar" class="login" onclick="verificar();"></input>
+        <label for="nuevoU">¿Eres nuevo?</label>
+        <a href="nuevoUsuarioUno.html" class="sinSubrayado"><span>Crear Cuenta</span></a>
       </form>
     </div>
 
     <div class="dos">
       <ul class="nav">
-        <li><a href="#">Productos</a>
+        <li><a href="productosUno.html">Productos</a>
           <ul>
-            <li><a href="#">Panes</a></li>
-            <li><a href="#">Pasteles</a></li>
-            <li><a href="#">Gelatinas</a></li>
+            <li><a href="panesUno.html">Panes</a></li>
+            <li><a href="pastelesUno.html">Pasteles</a></li>
+            <li><a href="gelatinasUno.html">Gelatinas</a></li>
           </ul>
         </li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Como Comprar</a></li>
-        <li><a href="#">Terminos y Condiciones</a></li>
+        <li><a href="contactoUno.html">Contacto</a></li>
+        <li><a href="comoComprarUno.html">Como Comprar</a></li>
+        <li><a href="terminosUno.html">Terminos y Condiciones</a></li>
       </ul>
     </div>
 
     <div class="tres" id="rotator">
-      <a href="#" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();"> <img src="img/bannerUno.jpg" id="uno" /> </a>
+      <img src="img/bannerUno.jpg" id="uno" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();" />
     </div>
 
     <div class="cuatro">
@@ -67,12 +70,12 @@
           </td>
           <td class="cuarto">
             |°| ACERCA DE... |°| <br />
-            <a href="#" class="sinSubrayado"> -Terminos y condiciones </a> <br />
-            <a href="#" class="sinSubrayado"> -Origen </a> <br />
-            <a href="#" class="sinSubrayado"> -Contacto </a> <br />
-            <a href="URL-FACEBOOK" target="_blank"><img alt="siguenos en facebook" height="25" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="25" /></a>
-            <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="25" src="http://3.bp.blogspot.com/-fnL839vxuao/UiXnFfyN17I/AAAAAAAABxc/VvcXJlZ65Ko/s1600/Google%252B+alt.png" title="siguenos en Google+" width="25" /></a>
-            <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="25" src="http://1.bp.blogspot.com/-7BdDTcxhdi8/UiXnHrEjOqI/AAAAAAAAByU/2nzkRxah3X8/s1600/Twitter+alt+4.png" title="siguenos en Twitter" width="25" /></a>
+            <a href="terminosUno.html" class="sinSubrayado"> -Terminos y condiciones </a> <br />
+            <a href="origenUno.html" class="sinSubrayado"> -Origen </a> <br />
+            <a href="contactoUno.html" class="sinSubrayado"> -Contacto </a> <br />
+            <a href="URL-FACEBOOK" target="_blank"><img alt="siguenos en facebook" height="25" src="img/face.png" title="siguenos en facebook" width="25" /></a>
+            <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="25" src="img/googleplus.png" title="siguenos en Google+" width="25" /></a>
+            <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="25" src="img/twitter.png" title="siguenos en Twitter" width="25" /></a>
           </td>
         </tr>
       </table>

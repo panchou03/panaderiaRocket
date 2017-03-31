@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/homeDos.css">
+    <link rel="stylesheet" type="text/css" href="css/contactoUno.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <title>Panadería Rocket - Los Mejores Panes</title>
   </head>
@@ -15,7 +15,6 @@
 
     <div class="unoYMedio">
       Bienvenido, <span class="palabraUser">@Panchou</span>
-
     </div>
 
     <div class="dos">
@@ -33,8 +32,26 @@
       </ul>
     </div>
 
-    <div class="tres" id="rotator">
-      <img src="img/bannerUno.jpg" id="uno" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();" />
+    <div class="tres">
+      <img src="img/bannerContacto.jpg" />
+      <br /> <br />
+      <div class="dentroDe">
+        <b>
+        En esta parte estamos a tu servicio, cualquier duda o cuestion que tengas, puedes mandarnos un mensaje directo
+        oh tambien pasarte por nuestras redes sociales y dejarnos sugerencias y comentarios.
+        </b> <br /> <br />
+        <form action="contactoDos.html" method="get">
+          <label for="nombreM">Nombre: </label>
+          <input type="text" name="nombreM" id="nombreM" /> <br /><br />
+          <label for="correoM">Correo: </label>
+          <input type="text" name="correoM" id="correoM" onkeyup="verficar();" /> <br /><br />
+          <label for="textoM">Mensaje: </label> <br />
+          <textarea id="textoM"></textarea> <br /><br />
+          <a href="contactoDos.html" class="sinSubrayado"><button id="bttnEnviar">Enviar</button></a>
+        </form>
+      </div>
+      
+      <br /> <br />
     </div>
 
     <div class="cuatro">
@@ -80,21 +97,10 @@
       </p>
       <img src="img/logoNuevo.png" class="logoFinal" />
     </div>
-
   </div>
 
   <script type="text/javascript">
-    function cambiar () {
-      document.getElementById('uno').src = "img/bannerDos.jpg";
-    }
-
-    function volver () {
-      document.getElementById('uno').src = "img/bannerTres.jpg";
-    }
-
-    function principio () {
-      document.getElementById('uno').src = "img/bannerUno.jpg";
-    }
+    
   </script>
 
   </body>
