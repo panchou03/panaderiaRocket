@@ -94,7 +94,31 @@ ul, ol {
 	font-family:"Courier New", Courier, monospace;
 	font-weight: bold;
 	color: black;
-	text-align: left;
+	text-align: center;
+}
+
+.bla li{
+	display: inline-block;
+   	margin:10px; 
+   	padding:5px;
+}
+
+.bla {
+	font-size: 11px;
+   	text-align: center;
+}
+
+#fotos {
+	width: 75px;
+	height: 55px;
+}
+
+.cantidad {
+	color: #843229;
+}
+
+.total {
+	color: #843229;
 }
 
 button {

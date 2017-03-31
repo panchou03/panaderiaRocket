@@ -5,7 +5,7 @@ html {
 .cero {
 	margin-right: auto;
 	margin-left: auto;
-	height: 650px;
+	height: auto;
 	width: 920px;
 	border-radius: 10px;
 	background-color: #dfd6d5;
@@ -21,32 +21,21 @@ html {
 	font-weight: bold;
 	text-align: right;
 	font-size: 11px;
-}
-
-input {
-	font-family:"Courier New", Courier, monospace;
-	font-weight: bold;
-	font-size: 11px;
+	margin-right: auto;
 }
 
 span {
 	color: #843229;
 }
 
-.login {
-	border-radius: 10px;
-	color: black;
-	background-color: white;
+.palabraUser {
+	color:red;
 }
 
 .uno {
 	background-color: #a8918b;
 	height: 100px;
 	width: 920px;
-	border-radius: 10px;
-}
-
-.logo {
 	border-radius: 10px;
 }
 
@@ -112,29 +101,25 @@ ul, ol {
 	text-align: center;
 }
 
-#nombreC {
+.dentroDe {
+	width: 500px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#nombreM {
+	width: 300px;
+}
+
+#correoM {
 	width: 250px;
 }
 
-#correoC {
-	width: 200px;
-}
-
-#telefonoC {
-	width: 100px;
-}
-
-#contrasenia1C {
-	width: 150px;
-}
-
-#contrasenia2C {
-	width: 150px;
-}
-
-#direccionC {
-	width: 300px;
-	height: 70px;
+#textoM {
+	width: 400px;
+	height: 150px;
 }
 
 .error {
@@ -149,7 +134,7 @@ ul, ol {
 	font-weight: bold;
 }
 
-#botonNuevo {
+button {
 	border: none;
     background: #843229;
     color: white;
@@ -162,7 +147,7 @@ ul, ol {
     font-weight: bold;
 }
 
-#botonNuevo:hover {
+button:hover {
 	background: #9b5a53;
 }
 
@@ -180,7 +165,18 @@ img {
 	color: white;
 }
 
-td {
+a.sinSubrayado {
+	text-decoration: none;
+	color: white;
+}
+
+a.sinSubrayadoDos {
+	text-decoration: none;
+	color: black;
+}
+
+td.primero {
+    border-right: 2px solid #9b5a53;
     font-size: 11px;
     line-height: 20px;
     padding: 20px 20px;
@@ -189,21 +185,31 @@ td {
     width: 25%;
 }
 
-a.sinSubrayado {
-	text-decoration: none;
-	color: white;
-}
-
-td.primero {
-    border-right: 2px solid #9b5a53  ;
-}
-
 td.segundo {
-    border-right: 2px solid #9b5a53  ;
+    border-right: 2px solid #9b5a53;
+    font-size: 11px;
+    line-height: 20px;
+    padding: 20px 20px;
+    text-align: left;
+    vertical-align: top;
+    width: 25%;
 }
 
 td.tercero {
-    border-right: 2px solid #9b5a53  ;
+    border-right: 2px solid #9b5a53;
+    font-size: 11px;
+    line-height: 20px;
+    padding: 20px 20px;
+    text-align: left;
+    vertical-align: top;
+    width: 25%;
+}
+
+td.cuarto {
+    font-size: 11px;
+    padding: 20px 20px;
+    text-align: left;
+    vertical-align: top;
 }
 
 .cinco {

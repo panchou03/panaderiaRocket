@@ -118,6 +118,18 @@ ul, ol {
 	height: 150px;
 }
 
+.error {
+	color: red;
+	font-weight: bold;
+	background-color: #F3E2A9;
+	display: inline;
+}
+
+.obligatorio {
+	color: red;
+	font-weight: bold;
+}
+
 button {
 	border: none;
     background: #843229;
