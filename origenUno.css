@@ -97,46 +97,17 @@ ul, ol {
 	text-align: center;
 }
 
-.bla li{
-    display: inline-block;
-    border-right: #a5a7aa solid 1px;
-   	border-bottom: #a5a7aa solid 1px;
-   	margin:10px; 
-   	padding:5px;
-}
-
-.bla {
-	font-size: 11px;
-   	text-align: center;
-}
-
-#panes {
-	width: 130px;
-	height: 130px;
-}
-
-.barraBusqueda {
-	background-color: #843229;
-	height: 35px;
-	width: 580px;
-	border-radius: 10px;
+.dentroDe {
+	text-align: center;
+	font-size: 13px;
 	margin-right: auto;
 	margin-left: auto;
+	width: 600px;
 }
 
-.bttnBuscar {
-	border: none;
-    background: #843229;
-    color: white;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    position: relative;
-    box-sizing: border-box;
-    font-family:"Courier New", Courier, monospace;
-    font-weight: bold;
-    width: 70px;
-    height: 30px;
+#teamRocket {
+	width: 300px;
+	height: 350px;
 }
 
 button {
@@ -170,15 +141,6 @@ img {
 	color: white;
 }
 
-td {
-    font-size: 11px;
-    line-height: 20px;
-    padding: 20px 20px;
-    text-align: left;
-    vertical-align: top;
-    width: 25%;
-}
-
 a.sinSubrayado {
 	text-decoration: none;
 	color: white;
@@ -190,15 +152,33 @@ a.sinSubrayadoDos {
 }
 
 td.primero {
-    border-right: 2px solid #9b5a53  ;
+    border-right: 2px solid #9b5a53;
+    font-size: 11px;
+    line-height: 20px;
+    padding: 20px 20px;
+    text-align: left;
+    vertical-align: top;
+    width: 25%;
 }
 
 td.segundo {
-    border-right: 2px solid #9b5a53  ;
+    border-right: 2px solid #9b5a53;
+    font-size: 11px;
+    line-height: 20px;
+    padding: 20px 20px;
+    text-align: left;
+    vertical-align: top;
+    width: 25%;
 }
 
 td.tercero {
-    border-right: 2px solid #9b5a53  ;
+    border-right: 2px solid #9b5a53;
+    font-size: 11px;
+    line-height: 20px;
+    padding: 20px 20px;
+    text-align: left;
+    vertical-align: top;
+    width: 25%;
 }
 
 .cinco {

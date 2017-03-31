@@ -97,6 +97,11 @@ ul, ol {
 	text-align: center;
 }
 
+#pasteles {
+	width: 170px;
+	height: 130px;
+}
+
 .bla li{
     display: inline-block;
     border-right: #a5a7aa solid 1px;
@@ -108,11 +113,6 @@ ul, ol {
 .bla {
 	font-size: 11px;
    	text-align: center;
-}
-
-#panes {
-	width: 130px;
-	height: 130px;
 }
 
 .barraBusqueda {

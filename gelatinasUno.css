@@ -97,6 +97,11 @@ ul, ol {
 	text-align: center;
 }
 
+#pasteles {
+	width: 170px;
+	height: 130px;
+}
+
 .bla li{
     display: inline-block;
     border-right: #a5a7aa solid 1px;
@@ -110,15 +115,15 @@ ul, ol {
    	text-align: center;
 }
 
-#panes {
-	width: 130px;
+#gelatinas {
+	width: 170px;
 	height: 130px;
 }
 
 .barraBusqueda {
 	background-color: #843229;
 	height: 35px;
-	width: 580px;
+	width: 590px;
 	border-radius: 10px;
 	margin-right: auto;
 	margin-left: auto;

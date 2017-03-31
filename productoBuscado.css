@@ -97,22 +97,9 @@ ul, ol {
 	text-align: center;
 }
 
-.bla li{
-    display: inline-block;
-    border-right: #a5a7aa solid 1px;
-   	border-bottom: #a5a7aa solid 1px;
-   	margin:10px; 
-   	padding:5px;
-}
-
-.bla {
-	font-size: 11px;
-   	text-align: center;
-}
-
-#panes {
-	width: 130px;
-	height: 130px;
+#ups {
+	width: 400px;
+	height: 400px;
 }
 
 .barraBusqueda {

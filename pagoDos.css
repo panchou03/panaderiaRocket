@@ -5,7 +5,7 @@ html {
 .cero {
 	margin-right: auto;
 	margin-left: auto;
-	height: auto;
+	height: 1200px;
 	width: 920px;
 	border-radius: 10px;
 	background-color: #dfd6d5;
@@ -91,52 +91,13 @@ ul, ol {
 	height: auto;
 	width: 920px;
 	border-radius: 10px;
-	font-family:"Courier New", Courier, monospace;
-	font-weight: bold;
-	color: black;
 	text-align: center;
 }
 
-.bla li{
-    display: inline-block;
-    border-right: #a5a7aa solid 1px;
-   	border-bottom: #a5a7aa solid 1px;
-   	margin:10px; 
-   	padding:5px;
-}
-
-.bla {
-	font-size: 11px;
-   	text-align: center;
-}
-
-#panes {
-	width: 130px;
-	height: 130px;
-}
-
-.barraBusqueda {
-	background-color: #843229;
-	height: 35px;
-	width: 580px;
-	border-radius: 10px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.bttnBuscar {
-	border: none;
-    background: #843229;
-    color: white;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    position: relative;
-    box-sizing: border-box;
-    font-family:"Courier New", Courier, monospace;
-    font-weight: bold;
-    width: 70px;
-    height: 30px;
+b {
+	font-family:"Courier New", Courier, monospace;
+	font-weight: bold;
+	color: black;
 }
 
 button {
@@ -156,8 +117,86 @@ button:hover {
 	background: #9b5a53;
 }
 
+select {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+option {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
 img {
 	border-radius: 10px;
+}
+
+.noTarjeta {
+	width: 180px;
+}
+
+.feTarjeta {
+	width: 50px;
+}
+
+.coTarjeta {
+	width: 200px;
+}
+
+table {
+	margin-right: auto;
+    margin-left: auto;
+}
+
+th {
+    background-color: #843229;
+    color: white;
+    font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    height: 40px;
+}
+
+#col1 {
+    width: 40px;
+    height: auto;
+}
+
+#col2 {
+    width: 100px;
+    height: auto;
+}
+
+#col3 {
+    width: 70px;
+    height: auto;
+}
+
+#col4 {
+    width: 70px;
+    height: auto;
+}
+
+#informacion {
+	width: 50px;
+    height: auto;
+}
+
+#totalTabla {
+	width: 40px;
+    height: auto;
 }
 
 .cuatro {
@@ -182,11 +221,6 @@ td {
 a.sinSubrayado {
 	text-decoration: none;
 	color: white;
-}
-
-a.sinSubrayadoDos {
-	text-decoration: none;
-	color: black;
 }
 
 td.primero {

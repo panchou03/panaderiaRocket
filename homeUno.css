@@ -5,7 +5,7 @@ html {
 .cero {
 	margin-right: auto;
 	margin-left: auto;
-	height: auto;
+	height: 650px;
 	width: 920px;
 	border-radius: 10px;
 	background-color: #dfd6d5;
@@ -21,17 +21,32 @@ html {
 	font-weight: bold;
 	text-align: right;
 	font-size: 11px;
-	margin-right: auto;
 }
 
-.palabraUser {
-	color:red;
+input {
+	font-family:"Courier New", Courier, monospace;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+span {
+	color: #843229;
+}
+
+.login {
+	border-radius: 10px;
+	color: black;
+	background-color: white;
 }
 
 .uno {
 	background-color: #a8918b;
 	height: 100px;
 	width: 920px;
+	border-radius: 10px;
+}
+
+.logo {
 	border-radius: 10px;
 }
 
@@ -88,72 +103,9 @@ ul, ol {
 
 .tres {
 	background-color: white;
-	height: auto;
+	height: 300px;
 	width: 920px;
 	border-radius: 10px;
-	font-family:"Courier New", Courier, monospace;
-	font-weight: bold;
-	color: black;
-	text-align: center;
-}
-
-.bla li{
-    display: inline-block;
-    border-right: #a5a7aa solid 1px;
-   	border-bottom: #a5a7aa solid 1px;
-   	margin:10px; 
-   	padding:5px;
-}
-
-.bla {
-	font-size: 11px;
-   	text-align: center;
-}
-
-#panes {
-	width: 130px;
-	height: 130px;
-}
-
-.barraBusqueda {
-	background-color: #843229;
-	height: 35px;
-	width: 580px;
-	border-radius: 10px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.bttnBuscar {
-	border: none;
-    background: #843229;
-    color: white;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    position: relative;
-    box-sizing: border-box;
-    font-family:"Courier New", Courier, monospace;
-    font-weight: bold;
-    width: 70px;
-    height: 30px;
-}
-
-button {
-	border: none;
-    background: #843229;
-    color: white;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    position: relative;
-    box-sizing: border-box;
-    font-family:"Courier New", Courier, monospace;
-    font-weight: bold;
-}
-
-button:hover {
-	background: #9b5a53;
 }
 
 img {
@@ -182,11 +134,6 @@ td {
 a.sinSubrayado {
 	text-decoration: none;
 	color: white;
-}
-
-a.sinSubrayadoDos {
-	text-decoration: none;
-	color: black;
 }
 
 td.primero {
