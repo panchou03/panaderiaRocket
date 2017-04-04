@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/homeDos.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+  </head>
+  <body>
+
+  <div class="cero">
+    <div class="uno">
+      <img src="img/bannerPrincipal.jpg" class="logo" >
+    </div>
+
+    <div class="unoYMedio">
+      Bienvenido, <span class="palabraUser">@Panchou</span>
+
+    </div>
+
+    <div class="dos">
+      <ul class="nav">
+        <li><a href="#">Productos</a>
+          <ul>
+            <li><a href="#">Panes</a></li>
+            <li><a href="#">Pasteles</a></li>
+            <li><a href="#">Gelatinas</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Terminos y Condiciones</a></li>
+      </ul>
+    </div>
+
+    <div class="tres" id="rotator">
+      <a href="#" onmouseover="cambiar();" onmouseout="volver();" onclick="principio();"> <img src="img/bannerUno.jpg" id="uno" /> </a>
+    </div>
+
+    <div class="cuatro">
+      <table>
+        <tr>
+          <td class="primero">
+            |°| PASTELES |°| <br />
+            <a href="#" class="sinSubrayado"> -De chocolate </a> <br />
+            <a href="#" class="sinSubrayado"> -De frutas </a> <br />
+            <a href="#" class="sinSubrayado"> -De sabores exoticos </a> <br />
+            <a href="#" class="sinSubrayado"> -Para niñ@s </a> <br />
+          </td>
+          <td class="segundo">
+            |°| PANES |°| <br />
+            <a href="#" class="sinSubrayado"> -Dulce </a> <br />
+            <a href="#" class="sinSubrayado"> -Salado </a> <br />
+            <a href="#" class="sinSubrayado"> -Integral </a> <br />
+            <a href="#" class="sinSubrayado"> -Soya </a> <br />
+          </td>
+          <td class="tercero">
+            |°| GELATINAS |°| <br />
+            <a href="#" class="sinSubrayado"> -De frutas </a> <br />
+            <a href="#" class="sinSubrayado"> -De leche </a> <br />
+            <a href="#" class="sinSubrayado"> -Marmoleadas </a> <br />
+            <a href="#" class="sinSubrayado"> -Para niñ@s </a> <br />
+          </td>
+          <td class="cuarto">
+            |°| ACERCA DE... |°| <br />
+            <a href="#" class="sinSubrayado"> -Terminos y condiciones </a> <br />
+            <a href="#" class="sinSubrayado"> -Origen </a> <br />
+            <a href="#" class="sinSubrayado"> -Contacto </a> <br />
+            <a href="URL-FACEBOOK" target="_blank"><img alt="siguenos en facebook" height="25" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="25" /></a>
+            <a href="URL-Google+" target="_blank"><img alt="siguenos en Google+" height="25" src="http://3.bp.blogspot.com/-fnL839vxuao/UiXnFfyN17I/AAAAAAAABxc/VvcXJlZ65Ko/s1600/Google%252B+alt.png" title="siguenos en Google+" width="25" /></a>
+            <a href="URL-Twitter" target="_blank"><img alt="siguenos en Twitter" height="25" src="http://1.bp.blogspot.com/-7BdDTcxhdi8/UiXnHrEjOqI/AAAAAAAAByU/2nzkRxah3X8/s1600/Twitter+alt+4.png" title="siguenos en Twitter" width="25" /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cinco">
+      <p>
+        PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
+      </p>
+      <img src="img/logoNuevo.png" class="logoFinal" />
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    function cambiar () {
+      document.getElementById('uno').src = "img/bannerDos.jpg";
+    }
+
+    function volver () {
+      document.getElementById('uno').src = "img/bannerTres.jpg";
+    }
+
+    function principio () {
+      document.getElementById('uno').src = "img/bannerUno.jpg";
+    }
+  </script>
+
+  </body>
+</html>
