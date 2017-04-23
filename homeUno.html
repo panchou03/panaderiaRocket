@@ -14,12 +14,9 @@
     </div>
 
     <div class="unoYMedio">
-      <form action="homeDos.html" method="get">
-        <label for="usuario">Usuario</label>
-        <input type="text" id="user" name="user" placeholder="Usuario" required="required" />
-        <label for="pass">Contraseña</label>
-        <input type="password" id="pass" name="pass" placeholder="******" required="required" />
-        <input type="submit" value="Entrar" class="login" onclick="verificar();"></input>
+      <form action="contactoUno.html"  method="get">
+        <label for="nuevoU">¿Tienes cuenta?</label>
+        <a href="usuarioUno.html" class="sinSubrayado"><span>Entrar</span></a>
         <label for="nuevoU">¿Eres nuevo?</label>
         <a href="nuevoUsuarioUno.html" class="sinSubrayado"><span>Crear Cuenta</span></a>
       </form>
@@ -90,6 +87,7 @@
 
   </div>
 
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript">
     function cambiar () {
       document.getElementById('uno').src = "img/bannerDos.jpg";
@@ -102,15 +100,6 @@
     function principio () {
       document.getElementById('uno').src = "img/bannerUno.jpg";
     }
-
-    function verificar () {
-      if(document.getElementById('user').value=='panchou' && document.getElementById('pass').value=='1234'){
-        document.form.submit();
-      }else{
-        alert("Usuario y/o contraseña no validos");
-      }
-    }
-  </script>
-
+    </script>
   </body>
 </html>

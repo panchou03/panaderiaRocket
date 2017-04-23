@@ -56,21 +56,25 @@
       <div class="puntoDos">
         <img src="img/bannerPago.jpg" />
         <br /> <b>Seleccione el metodo de Pago</b> <br /> <br />
-        <form id="seleccion" action="#" method="get">
+        <form id="seleccion">
           <input type="radio" id="opc4" name="opc" value="opcTarjeta" onclick="seleccionadoUno();" />
           <label for="opc4">Tarjeta de Credito</label> <br />
           <img src="img/tarjetas.png" height="100" width="300" /> <br />
           <label for="numeroDeTarjeta">Numero de Tarjeta</label>
-          <input type="text" id="noTarjeta" class="noTarjeta" name="numeroDeTarjeta" disabled="disabled" /> <br />
-          <label for="numeroDeTarjeta">Fecha de Tarjeta</label>
-          <input type="text" id="feTarjeta" class="feTarjeta" name="numeroDeTarjeta" disabled="disabled" /> <br /> <br /> <br />
+          <input type="text" id="noTarjeta" class="noTarjeta" name="numeroDeTarjeta" disabled="disabled" /> <div id="errorTarjeta"></div> <br />
+          <label for="FechaDeTarjeta">Fecha de Tarjeta</label>
+          <input type="text" id="meTarjeta" class="meTarjeta" name="numeroDeTarjeta" disabled="disabled" /> 
+          <label for="diagonalFecha"> / </label>
+          <input type="text" id="anTarjeta" class="anTarjeta" name="numeroDeTarjeta" disabled="disabled" /> <div id="errorFecha"></div> <br /> <br />
           
           <input type="radio" id="opc5" name="opc" value="opcRegalo" onclick="seleccionadoDos();" />
           <label for="opc5">Tarjeta de Regalo</label> <br />
           <img src="img/tarjetaRegalo.jpg" height="105" width="185" /> <br />
           <label for="codigoTar">Código de la Tarjeta de Regalo</label>
-          <input type="text" id="coTarjeta" class="coTarjeta" name="codigoDeRegalo" disabled="disabled" /> <br /> <br />
+          <input type="text" id="coRegalo" class="coTarjeta" name="codigoDeRegalo" disabled="disabled" /> <div id="errorRegalo"></div> <br /> <br />
         </form>
+        <div id="errorTarjeta"></div>
+        <button onclick="tarjeta();">Verificar</button><br />
         <br /> <br />
       </div>
       <div class="puntoTres">
@@ -183,14 +187,16 @@
   <script type="text/javascript">
     function seleccionadoUno() {
       document.getElementById('noTarjeta').disabled = false;
-      document.getElementById('feTarjeta').disabled = false;
+      document.getElementById('meTarjeta').disabled = false;
+      document.getElementById('anTarjeta').disabled = false;
       document.getElementById('coTarjeta').disabled = true;
     }
 
     function seleccionadoDos() {
       document.getElementById('coTarjeta').disabled = false;
       document.getElementById('noTarjeta').disabled = true;
-      document.getElementById('feTarjeta').disabled = true;
+      document.getElementById('meTarjeta').disabled = true;
+      document.getElementById('anTarjeta').disabled = true;
     }
 
     var valorDHL = parseInt(document.getElementById('opc1').value);
@@ -211,6 +217,36 @@
     function envioTres() {
       document.getElementById('costoEnvio').innerHTML = document.getElementById('opc3').value;
       document.getElementById('totalTotaloso').innerHTML = (valorEstafeta+totalProductos);
+    }
+
+    var mesTarjeta = parseInt(document.getElementById('meTarjeta').value);
+    var anioTarjeta = parseInt(document.getElementById('anTarjeta').value);
+    function tarjeta() {
+      if(document.getElementById('opc4').checked){
+        tarjeta = parseInt(document.getElementById('noTarjeta').value);
+        exprT = /^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/;
+        if(!exprT.test(tarjeta)) {
+          document.getElementById('errorTarjeta').innerHTML = 'Ese número de tarjeta no es válido :(';
+          // //////////////
+          var mes = parseInt(document.getElementById('meTarjeta').value);
+          var anio = parseInt(document.getElementById('anTarjeta').value);
+          exprM = /^[0-9]{2}$/;
+          if(!exprM.test(mes)) {
+            document.getElementById('errorFecha').innerHTML = 'Ese mes no es válido :(';
+            // //////////////
+            exprA = /^[0-9]{2}$/;
+            if(!exprA.test(anio)) {
+              document.getElementById('errorFecha').innerHTML = 'Ese año no es válido :(';
+            }
+          }
+        }
+      }else if(document.getElementById('opc5').checked) {
+        regalo = parseInt(document.getElementById('coRegalo').value);
+        exprR = /^[0-9A-Z]{6}$/;
+        if(!exprR.test(regalo)) {
+          document.getElementById('errorRegalo').innerHTML = 'Ese código de tarjeta no es válido :(';
+        }
+      }
     }
   </script>
 

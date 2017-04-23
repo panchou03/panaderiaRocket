@@ -38,18 +38,18 @@
 
       <form action="nuevoUsuarioDos.html" method="get" id="cliente" name="formu">
         <label for="nombreC">Nombre<span class="obligatorio">*</span></label>
-        <input type="text" name="nombreC" id="nombreC" required="required" /> <br /> <br />
+        <input type="text" name="nombreC" id="nombreC" /> <br /> <div id="errorNombre"></div> <br />
         <label for="correoC">Correo<span class="obligatorio">*</span></label>
-        <input type="text" name="correoC" id="correoC" required="required" /> <br /> <br />
+        <input type="text" name="correoC" id="correoC" /> <br /> <div id="errorCorreo"></div> <br />
         <label for="telefonoC">Telefono </label>
-        <input type="text" name="telefonoC" id="telefonoC" /> <br /> <br />
+        <input type="text" name="telefonoC" id="telefonoC" /> <br /> <div id="errorTelefono"></div>  <br />
         <label for="contrasenia1C">Contraseña<span class="obligatorio">*</span></label>
-        <input type="password" name="contrasenia1C" id="contrasenia1C" required="required" /> <br /> <br />
+        <input type="password" name="contrasenia1C" id="contrasenia1C" /> <br /> <br />
         <label for="contrasenia2C">Confirmar contraseña<span class="obligatorio">*</span></label>
-        <input type="password" name="contrasenia2C" id="contrasenia2C" required="required" /> <br /> <br />
+        <input type="password" name="contrasenia2C" id="contrasenia2C" /> <br /> <div id="noIguales"></div> <br />
         <label for="direccionC">Dirección<span class="obligatorio">*</span></label> <br />
-        <textarea id="direccionC" required="required"></textarea> <br /> <br />
-        <input type="submit" name="botonNuevo" id="botonNuevo" value="Registrarme" onclick="validaForm();" />
+        <textarea id="direccionC"></textarea> <br /> <br />
+        <button id="botonNuevo">Registrarme</button>
       </form>
       <br />
     </div>
@@ -100,20 +100,84 @@
 
   </div>
 
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript">
+    $("#botonNuevo").click(function(event){
+      var nombre = document.getElementById('nombreC').value;
+      exprN = /^[a-zA-Z]+$/;
+      if (!exprN.test(nombre)) {
+        document.getElementById('errorNombre').innerHTML = 'Ese nombre no es válido :(';
+        event.preventDefault();
+        var email = document.getElementById('correoC').value;
+        exprC = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ( !exprC.test(email) ) {
+            document.getElementById('errorCorreo').innerHTML = 'Ese correo no es válido :(';
+            event.preventDefault();
+            var telefono = document.getElementById('telefonoC').value;
+            exprT = /^[3][0-9]{9}$/;
+            if (!exprT.test(telefono)) {
+              document.getElementById('errorTelefono').innerHTML = 'Ese telefono no es válido :(';
+              event.preventDefault();
+              var pass1 = document.getElementById('contrasenia1C').value;
+              var pass2 = document.getElementById('contrasenia2C').value;
+              if ( pass1 != pass2 ){
+                document.getElementById('noIguales').innerHTML = 'Las contraseñas no son iguales';
+                event.preventDefault();
+              }
+            }
+        }
+      }
+    });
+    /*function validaForm() {
+      var nombre = document.getElementById('nombreC').value;
+      exprN = /^[a-zA-Z]+$/;
+      if (!exprN.test(nombre)) {
+        document.getElementById('errorNombre').innerHTML = 'Ese nombre no es válido :(';
+        // /////////////////////
+        var email = document.getElementById('correoC').value;
+        exprC = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if ( !exprC.test(email) ) {
+            document.getElementById('errorCorreo').innerHTML = 'Ese correo no es válido :(';
+            // /////////////////////
+            var telefono = document.getElementById('telefonoC').value;
+            exprT = /^[3][0-9]{9}$/;
+            if (!exprT.test(telefono)) {
+              document.getElementById('errorTelefono').innerHTML = 'Ese telefono no es válido :(';
+              // /////////////////////
+              var pass1 = document.getElementById('contrasenia1C').value;
+              var pass2 = document.getElementById('contrasenia2C').value;
+              if ( pass1 != pass2 ){
+                document.getElementById('noIguales').innerHTML = 'Las contraseñas no son iguales';
+              }
+            }
+        }
+    }
+  }
+  */
+    /*
     function validaForm() {
       var email = document.getElementById('correoC').value;
       expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
       if ( !expr.test(email) ) {
-          alert("Error: La dirección de correo " + email + " es incorrecta.");
-      }
-      
-      var pass1 = document.getElementById('contrasenia1C').value;
-      var pass2 = document.getElementById('contrasenia2C').value;
-      if ( pass1 != pass2 ){
-        alert("las contraseñas son diferentes :(");
+          document.getElementById('errorNombre').innerHTML = 'Ese correo no es válido :(';
+            var pass1 = document.getElementById('contrasenia1C').value;
+            var pass2 = document.getElementById('contrasenia2C').value;
+            if ( pass1 != pass2 ){
+              document.getElementById('noIguales').innerHTML = 'Las contraseñas no son iguales';
+                var nombre = document.getElementById('nombreC').value;
+                expr = /^[a-zA-Z]+$/;
+                if (!expr.test(nombre)) {
+                  document.getElementById('errorNombre').innerHTML = 'Ese nombre no es válido :(';
+                    var telefono = document.getElementById('telefonoC').value;
+                    expr = /^[3][0-9]{9}$/;
+                    if (!expr.test(telefono)) {
+                      document.getElementById('errorTelefono').innerHTML = 'Ese telefono no es válido :(';
+                    }
+                }
+            }
       }
     }
+    */
   </script>
 
   </body>
