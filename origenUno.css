@@ -181,6 +181,15 @@ td.tercero {
     width: 25%;
 }
 
+td.cuarto {
+    font-size: 11px;
+    line-height: 20px;
+    padding: 20px 20px;
+    text-align: left;
+    vertical-align: top;
+    width: 25%;
+}
+
 .cinco {
 	background-color: #dfd6d5;
 	height: 15px;

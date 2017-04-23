@@ -1,0 +1,96 @@
+html {
+	background-color: #dfd6d5;
+}
+
+.cero {
+	margin-right: auto;
+	margin-left: auto;
+	height: 650px;
+	width: 920px;
+	border-radius: 10px;
+	background-color: #dfd6d5;
+}
+
+.uno {
+	background-color: #a8918b;
+	height: 100px;
+	width: 920px;
+	border-radius: 10px;
+}
+
+.logo {
+	border-radius: 10px;
+}
+
+.dos {
+	background-color: #843229;
+	height: 20px;
+	width: 920px;
+	border-radius: 10px;
+
+	width:920px;
+	font-family:"Courier New", Courier, monospace;
+	font-weight: bold;
+}
+
+.tres {
+	background-color: #dfd6d5;
+	height: auto;
+	width: 920px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+img {
+	border-radius: 10px;
+}
+
+a.sinSubrayado {
+	text-decoration: none;
+	color: white;
+}
+
+button {
+	border: none;
+    background: #843229;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+button:hover {
+	background: #9b5a53;
+}
+
+.index {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.subs {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cinco {
+	background-color: #dfd6d5;
+	height: 15px;
+	width: 920px;
+	font-family:"Courier New", Courier, monospace;
+	font-weight: bold;
+	color: black;
+	font-size: 10px;
+	text-align: center;
+}
+
+.logoFinal {
+	height: 70px;
+	width: auto;
+}

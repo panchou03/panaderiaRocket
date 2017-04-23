@@ -137,16 +137,45 @@ ul, ol {
 	height: 70px;
 }
 
-.error {
-	color: red;
-	font-weight: bold;
-	background-color: #F3E2A9;
-	display: inline;
+#errorNombre {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    color: #843229;
+}
+
+#errorTelefono {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    color: #843229;
+}
+
+#errorCorreo {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    color: #843229;
 }
 
 .obligatorio {
 	color: red;
 	font-weight: bold;
+}
+
+#noIguales {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    color: #843229;
+}
+
+#noValido {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    color: #843229;
+}
+
+#userNovalido {
+	font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+    color: #843229;
 }
 
 #botonNuevo {
@@ -163,6 +192,23 @@ ul, ol {
 }
 
 #botonNuevo:hover {
+	background: #9b5a53;
+}
+
+.botonsito {
+	border: none;
+    background: #843229;
+    color: white;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    font-family:"Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+.botonsito:hover {
 	background: #9b5a53;
 }
 
