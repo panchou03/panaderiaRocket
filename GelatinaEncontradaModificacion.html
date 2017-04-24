@@ -72,11 +72,16 @@
     </div>
     <div class="tres" id="rotator">
     
-    <form name ="formularioContacto" class="formularioTipo1" method="post" action="homeAdmin.html">
+    <form name ="formularioContacto" class="formularioTipo1" method="post" action="homeAdmin.html"> 
     
     <fieldset>
-    <legend>Modificar Gelatina</legend>
-<label for="tipo">Selecciona el tipo de gelatina</label>
+
+          <legend>Agregar Gelatinas</legend>
+
+        <!-- Formulario de contacto -->
+        <form name ="formularioContacto" class="formularioTipo1" method="post" action="">
+
+      <label for="tipo">Selecciona el tipo de gelatina</label>
           <select id="Producto">
 
           <option>Leche</option>
@@ -88,11 +93,11 @@
           </select>
       <br>
       <br>
-      <label for="codigo">Código del producto:</label>
+      <label for="codigo">Ingresa el Código del producto:</label>
       <input type="text" name="codigo" id="codigo" readonly>
       <br>
       <br>
-      <label for="sabor">Ingresa el Sabor del producto:</label>
+      <label for="codigo">Ingresa el Sabor del producto:</label>
       <input type="text" name="sabor" id="sabor">
       <br>
       <br>
@@ -102,21 +107,21 @@
       <br>
       <label for="precio">Ingresa el precio del producto:</label>
       <input type="text" name="precio" id="precio" onchange="validaNum(this.value);">
+      <div id="error"> </div>
       <br>
       <br>
       <label for="codigo">Ingresa la descripción del producto:</label>
       <textarea name="texto" id="texto"></textarea>
-      <div id="error"> </div>
+      <br>
+      <div id="error2"> </div>
       <br>
       <br>
-<button class="button" name="boton" type="submit" onclick="return (validar())"> Guardar Cambios </button> <button  class= "button" type="reset" ">CANCELAR</button>
+      <button class="button" name="boton" type="submit" onclick="return validar();">REGISTRAR PRODUCTO </button> <button  class= "button" type="reset" ">CANCELAR</button>
     
     </fieldset>
 
     </form>
-   
     </div>
-
     <div class="cinco">
       <p>
         PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
@@ -128,37 +133,37 @@
 
   <script type="text/javascript">
   var div=document.getElementById('error');
-  
-  function validar() {
-
-  var todoCorrecto = true;
-  campo1 = document.getElementById('sabor').value;
-  campo2 = document.getElementById('Nombre').value;
-  campo3 = document.getElementById('precio').value;
-  
-  if (campo1 === ' ' ){
-  div.innerText="TODOS LOS CAMPOS DEBEN SER LLENADOS PARA CONTINUAR";
-  return false;
-  }
-   
-  /*if (campo2== ' '){
-  div.innerText="TODOS LOS CAMPOS DEBEN SER LLENADOS PARA CONTINUAR";
-  todoCorrecto=false;
-  }
-
-  if (campo3== ' '){
-  div.innerText="TODOS LOS CAMPOS DEBEN SER LLENADOS PARA CONTINUAR";
-  todoCorrecto=false;
-  }*/
-
-  if (todoCorrecto ==true) {formularioContacto.submit();}
-  }
-
   function validaNum(numero){
     if(!/^([0-9])*$/.test(numero))
-      div.innerText="EL CAMPO DE PRECIO DEBE DE SER LLENADO CON NUMERO";
+      div.innerText="EL PRECIO DEBE SER ESCRITO CON NUMEROS";
         }
+  </script>
 
+<script type="text/javascript">
+  function validar(){
+      var div2=document.getElementById('error2');
+      var sabor = document.formularioContacto.sabor.value;
+      var nombre = document.formularioContacto.Nombre.value;
+      var precio = document.formularioContacto.precio.value;
+      
+           if(sabor.length == 0)
+          {
+            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
+            return false;
+          }
+          else if(nombre.length == 0)
+          {
+            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
+            return false;
+          }
+          else if(precio.length == 0)
+          {
+            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
+            return false;
+          }
+
+          return true
+ }
   </script>
 
   </body>
