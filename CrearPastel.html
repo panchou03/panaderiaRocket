@@ -72,13 +72,16 @@
     </div>
     <div class="tres" id="rotator">
     
-    <form name= "form" action= "homeAdmin.html" enctype="multipart/form-data" action="uploader.php" method="post"> 
+    <form name ="formularioContacto" class="formularioTipo1" method="post" action="homeAdmin.html"> 
     
     <fieldset>
 
-          <legend>Agregar Pasteles</legend>
+          <legend>Agregar pastel</legend>
 
-      <label for="tipo">Selecciona el tipo de Pastel</label>
+        <!-- Formulario de contacto -->
+        <form name ="formularioContacto" class="formularioTipo1" method="post" action="">
+
+      <label for="tipo">Selecciona el tipo de pastel</label>
           <select id="Producto">
 
           <option>Chocolate</option>
@@ -91,7 +94,7 @@
       <br>
       <br>
       <label for="codigo">Ingresa el Código del producto:</label>
-      <input type="text" name="codigo" id="codigo" required>
+      <input type="text" name="codigo" id="codigo">
       <br>
       <br>
       <label for="codigo">Ingresa el Sabor del producto:</label>
@@ -114,14 +117,15 @@
       <label for="codigo">Ingresa la descripción del producto:</label>
       <textarea name="texto" id="texto"></textarea>
       <br>
+      <div id="error2"> </div>
       <br>
-      <button class="button" name="boton"> REGISTRAR PRODUCTO </button><button  class= "button" type="reset" ">CANCELAR</button>
+      <br>
+      <button class="button" name="boton" type="submit" onclick="return validar();">REGISTRAR PRODUCTO </button> <button  class= "button" type="reset" ">CANCELAR</button>
     
     </fieldset>
 
     </form>
     </div>
-
     <div class="cinco">
       <p>
         PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
@@ -135,8 +139,41 @@
   var div=document.getElementById('error');
   function validaNum(numero){
     if(!/^([0-9])*$/.test(numero))
-      div.innerText="El precio debe ser escrito con números";
+      div.innerText="EL PRECIO DEBE SER ESCRITO CON NUMEROS";
         }
+  </script>
+
+<script type="text/javascript">
+  function validar(){
+      var div2=document.getElementById('error2');
+      var codigo = document.formularioContacto.codigo.value;
+      var sabor = document.formularioContacto.sabor.value;
+      var nombre = document.formularioContacto.Nombre.value;
+      var precio = document.formularioContacto.precio.value;
+      
+      if(codigo.length == 0)
+      {
+        div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
+            return false;
+      }
+      else if(sabor.length == 0)
+          {
+            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
+            return false;
+          }
+          else if(nombre.length == 0)
+          {
+            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
+            return false;
+          }
+          else if(precio.length == 0)
+          {
+            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
+            return false;
+          }
+
+          return true
+ }
   </script>
 
   </body>
