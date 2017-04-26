@@ -76,10 +76,43 @@
     
     <fieldset>
 
-        <legend>Agregar Pan</legend>
+          <legend>Agregar</legend>
 
-      <label for="tipo">Selecciona el tipo de usuario</label>
-          <select id="Producto">
+        <!-- Formulario de contacto -->
+        <form name ="formularioContacto" class="formularioTipo1" method="post" action="">
+
+      
+      <br>
+      <br>
+      <label for="codigo">Ingresa el Código :</label>
+      <input type="text" name="codigo" id="codigo">
+      <br>
+      <br>
+      <label for="codigo">Ingresa el la edad:</label>
+      <input type="text" name="sabor" id="sabor" onchange="validaNum(this.value);" >
+      <br>
+      <br>
+      <label for="nombre">Ingresa el Nombre del producto:</label>
+      <input type="text" name="Nombre" id="Nombre">
+      <div id="error0"> </div>
+      <br>
+      <br>
+      <label for="precio">Ingresa el telefono del producto:</label>
+      <input type="text" name="precio" id="precio" onchange="validaNum(this.value);">
+      <div id="error"> </div>
+      <br>
+      <br>
+      <label for="codigo">Ingresa la descripción del producto:</label>
+      <textarea name="texto" id="texto"></textarea>
+       <br>
+      <br>
+      <label for="PassUser">Ingresa el password del usuario:</label>
+      <input type="text" name="PassUser" id="PassUser">
+      <br>
+      <br>
+
+ <label for="tipo">Selecciona el tipo de usuario</label>
+          <select id="TipoUser">
 
           <option>Selecciona una opción</option>
           <option>Usuario/option>
@@ -90,38 +123,13 @@
           <option>Administrador</option>
 
           </select>
-      <br>
-      <br>
-      <label for="codigo">Ingresa el Código del usuario:</label>
-      <input type="text" name="codigo" id="codigo">
-      <br>
-      <br>
-      <label for="codigo">Ingresa la contraseña del usuario:</label>
-      <input type="text" name="sabor" id="sabor">
-      <br>
-      <br>
-      <label for="nombre">Ingresa el Nombre del usuario:</label>
-      <input type="text" name="Nombre" id="Nombre">
-      <br>
-      <br>
-      <label for="precio">Ingresa la edad del usuario:</label>
-      <input type="text" name="precio" id="precio" onchange="validaNum(this.value);">
-      <div id="error"> </div>
-      <br>
-      <br>
-      <label for="codigo">Ingresa la dirección del usuario:</label>
-      <textarea name="texto" id="texto"></textarea>
-      
-      <br>
-      <br>
-      <label for="telefono">Ingresa el Teléfono del usuario:</label>
-      <input type="text" name="telefono" id="telefono">
-      <br>
-      <br>
-      <label for="imagen">Imagen del usuario</label>
+
+<label for="imagen">Imagen del producto</label>
           <input type="file" multiple="true" name="archivos" />
           <br>
-          <div id="error2"> </div>
+      <div id="error2"> </div>
+      <br>
+      <br>
       <button class="button" name="boton" type="submit" onclick="return validar();">REGISTRAR PRODUCTO </button> <button  class= "button" type="reset" ">CANCELAR</button>
     
     </fieldset>
@@ -141,40 +149,48 @@
   var div=document.getElementById('error');
   function validaNum(numero){
     if(!/^([0-9])*$/.test(numero))
-      div.innerText="DEBE SER ESCRITO CON NUMEROS";
+      div.innerText="LOS CAMPOS DE EDAD Y TELÉFONO DEBEN SER CON NÚMERO";
         }
   </script>
 
 <script type="text/javascript">
   function validar(){
+  	  var div1=document.getElementById('error0');
       var div2=document.getElementById('error2');
+      var exp=/^[a-zA-Z]+$/;
       var codigo = document.formularioContacto.codigo.value;
       var sabor = document.formularioContacto.sabor.value;
       var nombre = document.formularioContacto.Nombre.value;
       var precio = document.formularioContacto.precio.value;
-      var telefono= document.formularioContacto.telefono.value;
+      var PassUser= document.formularioContacto.PassUser.value;
       
       if(codigo.length == 0)
       {
-        div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENAR PARA CONTINUAR";
+        div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
             return false;
       }
       else if(sabor.length == 0)
           {
-            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENAR PARA CONTINUAR";
+            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
             return false;
           }
           else if(nombre.length == 0)
           {
-            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENAR PARA CONTINUAR";
+            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
             return false;
           }
           else if(precio.length == 0)
           {
-            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENAR PARA CONTINUAR";
+            div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
             return false;
           }
-          else if(telefono.length == 0){
+
+          else if (nombre != exp){
+          	div1.innerText= "ESTE CAMPO DEBE SER ESCRITO CON LETRAS "
+          	return false
+          }
+
+           else if(PassUser.length == 0){
 
             div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENAR PARA CONTINUAR";
           }
