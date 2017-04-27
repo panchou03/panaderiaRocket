@@ -107,6 +107,7 @@
       <br>
       <label for="nombre">Ingresa el Nombre del producto:</label>
       <input type="text" name="Nombre" id="Nombre">
+      <div id="error0"> </div>
       <br>
       <br>
       <label for="precio">Ingresa el precio del producto:</label>
@@ -146,6 +147,8 @@
 <script type="text/javascript">
   function validar(){
       var div2=document.getElementById('error2');
+      var div1=document.getElementById('error0');
+      var exp=/^[a-zA-Z]+$/;
       var codigo = document.formularioContacto.codigo.value;
       var sabor = document.formularioContacto.sabor.value;
       var nombre = document.formularioContacto.Nombre.value;
@@ -170,6 +173,11 @@
           {
             div2.innerText="HAY CAMPOS VACIOS FAVOR DE LLENARLOS PARA CONTINUAR";
             return false;
+          }
+
+          else if (nombre != exp){
+            div1.innerText= "ESTE CAMPO DEBE SER ESCRITO CON LETRAS "
+            return false
           }
 
           return true
