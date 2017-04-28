@@ -14,8 +14,7 @@
     </div>
 
     <div class="unoYMedio">
-      Bienvenido, <span class="palabraUser">@Panchou</span>
-
+      Bienvenido, <span class="palabraUser">@Panchou</span> | <a href="carritoUno.html" class="sinSubrayado">Carrito(<span class="palabraUser">3</span>)</a>
     </div>
 
     <div class="dos">
@@ -189,11 +188,11 @@
       document.getElementById('noTarjeta').disabled = false;
       document.getElementById('meTarjeta').disabled = false;
       document.getElementById('anTarjeta').disabled = false;
-      document.getElementById('coTarjeta').disabled = true;
+      document.getElementById('coRegalo').disabled = true;
     }
 
     function seleccionadoDos() {
-      document.getElementById('coTarjeta').disabled = false;
+      document.getElementById('coRegalo').disabled = false;
       document.getElementById('noTarjeta').disabled = true;
       document.getElementById('meTarjeta').disabled = true;
       document.getElementById('anTarjeta').disabled = true;
@@ -224,27 +223,30 @@
     function tarjeta() {
       if(document.getElementById('opc4').checked){
         tarjeta = parseInt(document.getElementById('noTarjeta').value);
-        exprT = /^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/;
+        exprT = /^\d{4}-?\d{4}-?\d{4}-?\d{4}$/;
         if(!exprT.test(tarjeta)) {
           document.getElementById('errorTarjeta').innerHTML = 'Ese número de tarjeta no es válido :(';
-          // //////////////
-          var mes = parseInt(document.getElementById('meTarjeta').value);
-          var anio = parseInt(document.getElementById('anTarjeta').value);
-          exprM = /^[0-9]{2}$/;
-          if(!exprM.test(mes)) {
-            document.getElementById('errorFecha').innerHTML = 'Ese mes no es válido :(';
-            // //////////////
-            exprA = /^[0-9]{2}$/;
-            if(!exprA.test(anio)) {
-              document.getElementById('errorFecha').innerHTML = 'Ese año no es válido :(';
-            }
-          }
+        }
+        var mes = parseInt(document.getElementById('meTarjeta').value);
+        var enero = 1;
+        var diciembre = 12;
+        if(mes<enero || mes>diciembre){
+          document.getElementById('errorFecha').innerHTML = 'Ese mes no es válido :(';
+        }
+        var anio = parseInt(document.getElementById('anTarjeta').value);
+        exprA = /^[0-9]{2}$/;
+        if(!exprA.test(anio)) {
+          document.getElementById('errorFecha').innerHTML = 'Ese año no es válido :(';
+        }else{
+          document.getElementById('errorFecha').innerHTML = 'Todo esta en orden :)';
         }
       }else if(document.getElementById('opc5').checked) {
-        regalo = parseInt(document.getElementById('coRegalo').value);
-        exprR = /^[0-9A-Z]{6}$/;
+        regalo = document.getElementById('coRegalo').value;
+        exprR = /^[A-Z0-9]{10}$/;
         if(!exprR.test(regalo)) {
           document.getElementById('errorRegalo').innerHTML = 'Ese código de tarjeta no es válido :(';
+        }else{
+          document.getElementById('errorRegalo').innerHTML = 'Todo esta en orden :)';
         }
       }
     }

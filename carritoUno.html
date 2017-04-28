@@ -14,7 +14,7 @@
     </div>
 
     <div class="unoYMedio">
-      Bienvenido, <span class="palabraUser">@Panchou</span>
+      Bienvenido, <span class="palabraUser">@Panchou</span> | <a href="carritoUno.html" class="sinSubrayado">Carrito(<span class="palabraUser">3</span>)</a>
     </div>
 
     <div class="dos">
@@ -115,6 +115,9 @@
       var x = 1;
       document.getElementById('cantidad').innerHTML=(cantidad-x);
       document.getElementById('total').innerHTML=(total2-total1);
+      if(cantidad < 0) {
+        $('.botonResta').attr('disabled','disabled');
+      }
     }
   </script>
 

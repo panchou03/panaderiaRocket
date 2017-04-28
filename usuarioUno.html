@@ -13,11 +13,6 @@
       <a href="homeUno.html"><img src="img/bannerPrincipal.jpg" class="logo" /></a>
     </div>
 
-    <div class="unoYMedio">
-      Bienvenido, <span class="palabraUser">@Panchou</span>
-
-    </div>
-
     <div class="dos">
       <ul class="nav">
         <li><a href="productosUno.html">Productos</a>
@@ -38,15 +33,14 @@
       <div class="entrar">
         <img src="img/bannerInicio.jpg" />
         <form action="homeDos.html">
-          <label>Usuario</label><br />
+          <label>Cuenta de Correo</label><br />
           <input type="text" name="user" id="userU" /> <br />
           <label>Contraseña</label><br />
-          <input type="password" name="pass" id="passU" /> <br /> <br />
+          <input type="password" name="pass" id="passU" /> <br />
           <div class="error" id="infoIncorrecta"></div> <br />
-          <label for="nCuenta" id="sinCuenta1">¿No tienes cuenta?</label><a href="nuevoUsuarioUno.html" class="sinSubrayado" id="sinCuenta2"> Crear una nueva cuenta</a>
+          <label for="nCuenta" id="sinCuenta1">¿No tienes cuenta?</label><a href="nuevoUsuarioUno.html" class="sinSubrayado" id="sinCuenta2"> Crear una nueva cuenta</a> <br />
           <button id="botonEntrar">Entrar</button> <br />
         </form>
-        
         <br />
       </div>
       <br /><br />
@@ -103,7 +97,7 @@
     $("#botonEntrar").click(function(event){
       var user = document.getElementById('userU').value;
       var pass = document.getElementById('passU').value;
-      if(user != 'panchou') {
+      if(user != 'panchou@hotmail.com') {
         document.getElementById('infoIncorrecta').innerHTML = 'El usuario y/o contraseña son incorrectos';
         event.preventDefault();
       } else if(pass != '1234') {
