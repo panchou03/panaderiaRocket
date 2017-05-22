@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/agregar1.css">
+    <link rel="stylesheet" type="text/css" href="css/agregar2.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
   </head>
   <body>
@@ -72,22 +72,24 @@
     </div>
     <div class="tres" id="rotator">
     
-    <form name= "form" action= "PastelEncontrado.html" enctype="multipart/form-data" action="uploader.php" method="post"> 
+     <form name ="formularioContacto" class="formularioTipo1" method="get" action="PastelEncontrado.php">
     
     <fieldset>
+    <legend>Buscar Pasteles</legend>
+  
+          
+     <!-- Formulario de contacto >
+<form name ="formularioContacto" class="formularioTipo1" method="post" action=""-->
+<br>
+<br>
+<label for="Codigo"><span>Ingresa el Código del Pastel a buscar:</span> </label>
+<input id="Codigo" type="text" name="codigo" />
 
-          <legend>Buscar Pasteles</legend>
+<div id="error"> </div>
 
-      <br>
-      <br>
-      <label for="codigo">Ingresa el Código del Pastel a buscar:<span class="obligatorio">*</span></label>
-      <input type="text" name="codigo" id="codigo" required>
-       <br>
-      <br>
-
-      <div id="error"> </div>
-
-      <button class="button" name="boton""> BUSCAR PASTEL</button>
+<br>
+<br>
+<button class="button" name="boton" type="submit"> BUSCAR PASTEL </button> <button  class= "button" type="reset" "> CANCELAR </button>
     
     </fieldset>
 
@@ -104,8 +106,28 @@
   </div>
 
   <script type="text/javascript">
+var div=document.getElementById('error');
+window.onload = function () {
+document.formularioContacto.nombre.focus();
+document.formularioContacto.addEventListener('submit', validarFormulario);
+}
+ 
+function validarFormulario(evObject) {
+evObject.preventDefault();
+var todoCorrecto = true;
+var formulario = document.formularioContacto;
+for (var i=0; i<formulario.length; i++) {
+                if(formulario[i].type =='text') {
+                               if (formulario[i].value == null || formulario[i].value.length == 0 || /^\s*$/.test(formulario[i].value)){
+                               div.innerText="favor de llenar este campo para continuar";
+                               todoCorrecto=false;
+                               }
+                }
+                }
+if (todoCorrecto ==true) {formulario.submit();}
+}
   
-  </script>
+   </script>
 
   </body>
 </html>

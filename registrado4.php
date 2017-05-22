@@ -72,29 +72,55 @@
     </div>
     <div class="tres" id="rotator">
     
-     <form name ="formularioContacto" class="formularioTipo1" method="get" action="PastelEncontradoEliminar.php">
+    <form action= "homeAdmin.html" method="post">     
     
     <fieldset>
-    <legend>Eliminar Pasteles</legend>
-  
+
+          <legend>Gelatinas Registradas</legend>
           
-     <!-- Formulario de contacto>
-<form name ="formularioContacto" class="formularioTipo1" method="post" action=""-->
-<br>
-<br>
-<label for="Codigo"><span>Ingresa el Código del Pastel a Eliminar :</span> </label>
-<input id="Codigo" type="text" name="codigo" />
+          <section>
+            
+              <?php  
 
-<div id="error"> </div>
+                include 'config.php';
 
-<br>
-<br>
-<button class="button" name="boton" type="submit"> ELIMINAR PASTEL </button> <button  class= "button" type="reset" "> CANCELAR </button>
+
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Fallo de conexión: " . $conn->connect_error);
+                } 
+
+                //Obtengo variables para guardar
+
+                $codigo= $_POST["codigo"];
+                $sabor = $_POST["sabor"];
+                $nombre = $_POST["Nombre"];
+                $tipo = $_POST["tipo"];
+                $precio = $_POST["precio"];
+                $descripcion = $_POST["texto"];
+                $tam = $_POST["tamanio"];
+
+
+                $sql = "UPDATE pastel SET TipoPastel='$tipo', NombrePastel='$nombre', SaborPastel='$sabor', PrecioPastel='$precio',TamanioPastel='$tam', Descripcion='$descripcion' WHERE Id_pastel=$codigo";
+
+                if ($conn->query($sql) === TRUE) {
+                    echo " registro modificado exitosamente";
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+
+                $conn->close();
+              
+               ?>
+          </section>
+      <button class="button" name="boton"> Volver al index </button>
     
     </fieldset>
 
-    </form>
     </div>
+
     <div class="cinco">
       <p>
         PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
@@ -105,27 +131,6 @@
   </div>
 
   <script type="text/javascript">
-
-var div=document.getElementById('error');
-window.onload = function () {
-document.formularioContacto.nombre.focus();
-document.formularioContacto.addEventListener('submit', validarFormulario);
-}
- 
-function validarFormulario(evObject) {
-evObject.preventDefault();
-var todoCorrecto = true;
-var formulario = document.formularioContacto;
-for (var i=0; i<formulario.length; i++) {
-                if(formulario[i].type =='text') {
-                               if (formulario[i].value == null || formulario[i].value.length == 0 || /^\s*$/.test(formulario[i].value)){
-                               div.innerText="favor de llenar este campo para continuar";
-                               todoCorrecto=false;
-                               }
-                }
-                }
-if (todoCorrecto ==true) {formulario.submit();}
-}
   
   </script>
 

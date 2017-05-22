@@ -72,29 +72,42 @@
     </div>
     <div class="tres" id="rotator">
     
-     <form name ="formularioContacto" class="formularioTipo1" method="get" action="PastelEncontradoEliminar.php">
+    <form name= "form" action= "homeAdmin.html" enctype="multipart/form-data" action="uploader.php" method="post"> 
     
     <fieldset>
-    <legend>Eliminar Pasteles</legend>
-  
-          
-     <!-- Formulario de contacto>
-<form name ="formularioContacto" class="formularioTipo1" method="post" action=""-->
-<br>
-<br>
-<label for="Codigo"><span>Ingresa el Código del Pastel a Eliminar :</span> </label>
-<input id="Codigo" type="text" name="codigo" />
 
-<div id="error"> </div>
+          <legend>Eliminar Pastel</legend>
 
-<br>
-<br>
-<button class="button" name="boton" type="submit"> ELIMINAR PASTEL </button> <button  class= "button" type="reset" "> CANCELAR </button>
+     <section>
+<?php
     
+    include 'config.php';
+
+    $codigo=$_GET["codigo"];
+    
+    $conn= new mysqli($servername, $username, $password, $dbname);
+
+    if($conn->connect_error){
+      die("fallo conexion".$conn->connect_error);
+    }
+    
+    $sql="DELETE FROM pastel WHERE Id_pastel= $codigo";
+    
+    if ($conn->query($sql) === TRUE) {
+        echo "Registro eliminado exitosamente";
+    } else {
+        echo "Error al eliminar registro: " . $conn->error;
+    }
+    $conn->close();
+    ?>
+    </section>
+    <button class="button" name="boton"> Volver al index </button>
+  
     </fieldset>
 
     </form>
     </div>
+
     <div class="cinco">
       <p>
         PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
@@ -105,27 +118,6 @@
   </div>
 
   <script type="text/javascript">
-
-var div=document.getElementById('error');
-window.onload = function () {
-document.formularioContacto.nombre.focus();
-document.formularioContacto.addEventListener('submit', validarFormulario);
-}
- 
-function validarFormulario(evObject) {
-evObject.preventDefault();
-var todoCorrecto = true;
-var formulario = document.formularioContacto;
-for (var i=0; i<formulario.length; i++) {
-                if(formulario[i].type =='text') {
-                               if (formulario[i].value == null || formulario[i].value.length == 0 || /^\s*$/.test(formulario[i].value)){
-                               div.innerText="favor de llenar este campo para continuar";
-                               todoCorrecto=false;
-                               }
-                }
-                }
-if (todoCorrecto ==true) {formulario.submit();}
-}
   
   </script>
 

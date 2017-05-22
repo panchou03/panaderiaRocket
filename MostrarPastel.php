@@ -72,29 +72,44 @@
     </div>
     <div class="tres" id="rotator">
     
-     <form name ="formularioContacto" class="formularioTipo1" method="get" action="PastelEncontradoEliminar.php">
+	<form action= "homeAdmin.html" method="post">     
     
     <fieldset>
-    <legend>Eliminar Pasteles</legend>
-  
+
+          <legend>Pasteles Registrados</legend>
           
-     <!-- Formulario de contacto>
-<form name ="formularioContacto" class="formularioTipo1" method="post" action=""-->
-<br>
-<br>
-<label for="Codigo"><span>Ingresa el Código del Pastel a Eliminar :</span> </label>
-<input id="Codigo" type="text" name="codigo" />
 
-<div id="error"> </div>
 
-<br>
-<br>
-<button class="button" name="boton" type="submit"> ELIMINAR PASTEL </button> <button  class= "button" type="reset" "> CANCELAR </button>
+<section>
+  	<?php
+
+  	include 'config.php';
+
+  	$conn= new mysqli($servername, $username, $password, $dbname);
+
+  	if($conn->connect_error){
+  		die("fallo conexion".$conn->connect_error);
+  	}
+  	$sql="SELECT*FROM pastel";
+  	$result = $conn->query($sql);
+
+  	if($result->num_rows > 0){
+  		while($row=$result->fetch_assoc()){
+  		echo "código: " .$row["Id_pastel"]."<br>"."Nombre: ". $row["NombrePastel"]."<br>". "Precio: $".$row["PrecioPastel"]."<br>"."Tamanio: ". $row["TamanioPastel"]."<br>". "Sabor: ".$row["SaborPastel"]."<br>" ."Tipo: ".$row["TipoPastel"]."<br>" ."Descripcion: ".$row["Descripcion"]."<br><br>";
+  		}
+  	}else{
+  		echo"0 resultados";
+  	}
+  	$conn->close();
+  	?>
+  </section>
+
+      <button class="button" name="boton"> Volver al index </button>
     
     </fieldset>
 
-    </form>
     </div>
+
     <div class="cinco">
       <p>
         PANADERIA ROCKET S.A DE C.V ® Todos los derechos reservados. <br/>Desarrollada por el Equipo Rocket.
@@ -105,29 +120,9 @@
   </div>
 
   <script type="text/javascript">
-
-var div=document.getElementById('error');
-window.onload = function () {
-document.formularioContacto.nombre.focus();
-document.formularioContacto.addEventListener('submit', validarFormulario);
-}
- 
-function validarFormulario(evObject) {
-evObject.preventDefault();
-var todoCorrecto = true;
-var formulario = document.formularioContacto;
-for (var i=0; i<formulario.length; i++) {
-                if(formulario[i].type =='text') {
-                               if (formulario[i].value == null || formulario[i].value.length == 0 || /^\s*$/.test(formulario[i].value)){
-                               div.innerText="favor de llenar este campo para continuar";
-                               todoCorrecto=false;
-                               }
-                }
-                }
-if (todoCorrecto ==true) {formulario.submit();}
-}
   
   </script>
-
+  
+    
   </body>
 </html>

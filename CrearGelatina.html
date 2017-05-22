@@ -72,17 +72,17 @@
     </div>
     <div class="tres" id="rotator">
     
-    <form name ="formularioContacto" class="formularioTipo1" method="post" action="homeAdmin.html"> 
+    <form name ="formularioContacto" class="formularioTipo1" method="post" action="registrado1.php"> 
     
     <fieldset>
 
           <legend>Agregar Gelatinas</legend>
 
-        <!-- Formulario de contacto -->
-        <form name ="formularioContacto" class="formularioTipo1" method="post" action="">
+        <!-- Formulario de contacto >
+        <form name ="formularioContacto" class="formularioTipo1" method="post" action=""-->
 
       <label for="tipo">Selecciona el tipo de gelatina</label>
-          <select id="Producto">
+          <select id="Producto"  name="tipo">
 
           <option>Leche</option>
 
@@ -171,7 +171,7 @@
             return false;
           }
 
-          else if (nombre != exp){
+          else if (!/^[a-zA-Z]+$/.test(nombre)){
           	div1.innerText= "ESTE CAMPO DEBE SER ESCRITO CON LETRAS "
           	return false
           }
